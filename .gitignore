@@ -1,20 +1,20 @@
 # =============== #
 # Unity generated #
 # =============== #
-Temp/
-Library/
+CaptainObvious/Temp/
+CaptainObvious/Library/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-ExportedObj/
-obj/
+CaptainObvious/ExportedObj/
+CaptainObvious/obj/
 *.svd
 *.userprefs
-/*.csproj
+CaptainObvious//*.csproj
 *.pidb
 *.suo
-/*.sln
+CaptainObvious//*.sln
 *.user
 *.unityproj
 *.booproj

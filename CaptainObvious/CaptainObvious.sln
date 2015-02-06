@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{C8323A42-0ACE-52C0-2654-7204B683C6DE}") = "CaptainObvious", "Assembly-CSharp-firstpass.csproj", "{DE801E62-E78E-8ABE-655A-6214BBD056E3}"
 EndProject
+Project("{C8323A42-0ACE-52C0-2654-7204B683C6DE}") = "CaptainObvious", "Assembly-CSharp.csproj", "{EE94D064-BE41-B64D-B180-583050019BC7}"
+EndProject
 Project("{C8323A42-0ACE-52C0-2654-7204B683C6DE}") = "CaptainObvious", "Assembly-UnityScript-firstpass.unityproj", "{177B720C-F075-FAFE-A974-B68B8081A8F2}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{DE801E62-E78E-8ABE-655A-6214BBD056E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE801E62-E78E-8ABE-655A-6214BBD056E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE801E62-E78E-8ABE-655A-6214BBD056E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE94D064-BE41-B64D-B180-583050019BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE94D064-BE41-B64D-B180-583050019BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE94D064-BE41-B64D-B180-583050019BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE94D064-BE41-B64D-B180-583050019BC7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{177B720C-F075-FAFE-A974-B68B8081A8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{177B720C-F075-FAFE-A974-B68B8081A8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{177B720C-F075-FAFE-A974-B68B8081A8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -23,7 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
+				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -42,4 +48,5 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
+
 EndGlobal

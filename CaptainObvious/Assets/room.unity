@@ -156,7 +156,7 @@ GameObject:
   - 23: {fileID: 188667736}
   m_Layer: 0
   m_Name: Knob
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -718,6 +718,7 @@ GameObject:
   - 114: {fileID: 1790129004}
   - 114: {fileID: 1790129003}
   - 114: {fileID: 1790129002}
+  - 114: {fileID: 1790129006}
   m_Layer: 0
   m_Name: First Person Controller
   m_TagString: Untagged
@@ -841,6 +842,19 @@ CharacterController:
   m_SkinWidth: .0500000007
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1790129006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1790129000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277e448b369c7374cabeddc47765c029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalCursor: {fileID: 2800000, guid: ac159b6986fa3c44a8bfa31ff1b59594, type: 3}
+  interactCursor: {fileID: 2800000, guid: 48b171bd512713f4b8d217680f5764f3, type: 3}
 --- !u!1 &1834122543
 GameObject:
   m_ObjectHideFlags: 0
