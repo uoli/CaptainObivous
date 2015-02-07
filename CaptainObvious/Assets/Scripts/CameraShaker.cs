@@ -17,6 +17,9 @@ public class CameraShaker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
+		if (intensity <= 0)
+			return;
+
 		var maxVal = maxRange * 0.5f * intensity;
 		var deltax = Random.Range(-maxVal,maxVal);
 		var deltay = Random.Range(-maxVal,maxVal);

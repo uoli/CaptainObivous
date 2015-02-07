@@ -28,9 +28,9 @@ GameObject:
   - 20: {fileID: 2024502}
   - 92: {fileID: 9224502}
   - 124: {fileID: 12424502}
-  - 114: {fileID: 11424502}
   - 81: {fileID: 8124502}
   - 82: {fileID: 8246368}
+  - 114: {fileID: 11419818}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -89,8 +89,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124506}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .958000004, z: -.50999999}
+  m_LocalRotation: {x: 0, y: -.72436595, z: 0, w: .689415753}
+  m_LocalPosition: {x: 13.1700001, y: 13.6999998, z: -2.46000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 424502}
@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dda4563be7326eb49b9722190766ccd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camShaker: {fileID: 11419818}
 --- !u!114 &11415242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,9 +251,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e448b369c7374cabeddc47765c029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 11408764}
   normalCursor: {fileID: 2800000, guid: ac159b6986fa3c44a8bfa31ff1b59594, type: 3}
   interactCursor: {fileID: 2800000, guid: 48b171bd512713f4b8d217680f5764f3, type: 3}
---- !u!114 &11424502
+--- !u!114 &11419818
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -260,16 +262,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 124504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
+  m_Script: {fileID: 11500000, guid: acf9c849bdc877444bd29ed1958e9cc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axes: 2
-  sensitivityX: 10
-  sensitivityY: 10
-  minimumX: 0
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
+  intensity: 0
+  maxRange: 2
+  cam: {fileID: 2024502}
 --- !u!114 &11424504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -349,11 +347,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axes: 0
   sensitivityX: 15
-  sensitivityY: 0
+  sensitivityY: 10
   minimumX: -360
   maximumX: 360
-  minimumY: 0
-  maximumY: 0
+  minimumY: -60
+  maximumY: 60
 --- !u!124 &12424502
 Behaviour:
   m_ObjectHideFlags: 1
@@ -369,7 +367,7 @@ CharacterController:
   m_GameObject: {fileID: 124506}
   serializedVersion: 2
   m_Height: 2
-  m_Radius: .0199999996
+  m_Radius: .400000006
   m_SlopeLimit: 45
   m_StepOffset: .400000006
   m_SkinWidth: .0500000007

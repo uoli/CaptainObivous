@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class Cursor : MonoBehaviour {
+	public Player player;
 	public Texture2D normalCursor;
 	public Texture2D interactCursor;
 	private float distOfObjectInFrontOfPlayer = 2f;
@@ -15,23 +16,27 @@ public class Cursor : MonoBehaviour {
 	void Update () {
 		var ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit = new RaycastHit();
+		bool isOverInteractable = false;
 		if (Physics.Raycast (ray, out hit, 10)) {
 			if (hit.collider.gameObject.tag.Equals("Interactable"))
 			{
+				isOverInteractable = true;
 			    UnityEngine.Cursor.SetCursor(interactCursor, Vector3.zero, CursorMode.Auto);
 				overInteractable = true;
 				selectedInteractable = hit.collider.gameObject;
 			}
-			else
-			{
-				UnityEngine.Cursor.SetCursor(normalCursor, Vector3.zero, CursorMode.Auto);
-				overInteractable = false;
-			}
 		}
-		HandleMouseClick();
+
+		if (!isOverInteractable) 
+		{
+			UnityEngine.Cursor.SetCursor(normalCursor, Vector3.zero, CursorMode.Auto);
+			overInteractable = false;
+		}
+		HandleMouseClick(ray, hit);
 	}
 
-	void HandleMouseClick() {
+	void HandleMouseClick(Ray ray, RaycastHit hit) 
+	{
 		if (Input.GetMouseButtonDown(0))
 		{
 			//handle punchbag
@@ -39,6 +44,17 @@ public class Cursor : MonoBehaviour {
 			{
 				selectedInteractable.rigidbody.AddRelativeForce(-Input.mousePosition * punchForce);
 				//selectedInteractable.rigidbody.AddForceAtPosition(new Vector3(punchForce, 0, punchForce), Input.mousePosition);
+				//selectedInteractable.rigidbody.AddForceAtPosition(ray.direction * punchForce, hit.point);
+				//selectedInteractable.rigidbody.AddForce(ray.direction * punchForce);
+				player.IncreaseRage();
+				return;
+			}
+
+
+			if (overInteractable && selectedInteractable.GetComponent<Phone>() != null)
+			{
+				var phone = selectedInteractable.GetComponent<Phone>();
+				phone.Interact(player);
 				return;
 			}
 
@@ -55,7 +71,7 @@ public class Cursor : MonoBehaviour {
 			//handle door
 			if (overInteractable && selectedInteractable.GetComponent<DoorAnimation>() != null)
 			{
-				selectedInteractable.GetComponent<DoorAnimation>().enabled = true;
+				selectedInteractable.GetComponent<DoorAnimation>().Open();
 				return;
 			}
 
