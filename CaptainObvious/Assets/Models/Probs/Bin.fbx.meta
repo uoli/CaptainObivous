@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10f39299cca31fb4ca9b744c12a1c015
+guid: f90fad93a6e8c684db0bbc9a075f1742
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,10 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Wall_90_2.5U001
-    4300002: Wall_90_2.5U002
-    4300004: Wall_90_right
-    4300006: Wall_90_left001
+    4300000: Bin
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -36,7 +33,7 @@ ModelImporter:
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -49,7 +46,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
