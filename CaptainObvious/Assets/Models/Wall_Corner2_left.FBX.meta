@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6e19257b7d631724d8f6788f12213eb2
+guid: f010b6962f2a2f4419bcb34fdd7ec21f
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,8 +7,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Wall_Std_5u
-    4300002: Wall_Std_2.5u
+    4300000: Wall_corner2_left
     9500000: //RootNode
   materials:
     importMaterials: 1
