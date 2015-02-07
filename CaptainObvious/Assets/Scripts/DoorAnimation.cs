@@ -3,27 +3,55 @@ using System.Collections;
 
 public class DoorAnimation : MonoBehaviour
 {
-	float time = 0;
+	float m_Time = 0;
+	bool m_Sealed = false;
 
-	void OnEnable()
+	enum State
 	{
-		time = 0;
+		Idle,
+		Opening,
+		Closing
 	}
+	State m_State = State.Idle;
+
 
 	// Update is called once per frame
 	void Update ()
 	{
-		time += Time.deltaTime;
-		float angle = Mathf.LerpAngle(0, -90, time);
-		transform.localEulerAngles = new Vector3(0, angle, 0);
-		if (time >= 1.0f)
+		switch (m_State)
 		{
-			enabled = false;
+		case State.Idle:
+			return;
+		case State.Opening:
+			m_Time += Time.deltaTime;
+			break;
+		case State.Closing:
+			m_Time -= Time.deltaTime;
+			break;
 		}
+
+		float angle = Mathf.LerpAngle(0, -90, m_Time);
+		transform.localEulerAngles = new Vector3(0, angle, 0);
+		if (m_Time >= 1.0f || m_Time <= 0.0)
+			m_State = State.Idle;
 	}
 
-	public void Reset()
+	public void Open()
 	{
-		transform.localEulerAngles = new Vector3(0, 0, 0);
+		if (m_Sealed)
+			return;
+
+		enabled = true;
+		m_Time = 0.0f;
+		m_State = State.Opening;
+	}
+
+	public void Close(bool seal)
+	{
+		enabled = true;
+		m_Time = 0.0f;
+		if (!m_Sealed && seal)
+			m_Sealed = true;
+		m_State = State.Closing;
 	}
 }

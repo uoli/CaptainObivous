@@ -55,7 +55,7 @@ public class Cursor : MonoBehaviour {
 			//handle door
 			if (overInteractable && selectedInteractable.GetComponent<DoorAnimation>() != null)
 			{
-				selectedInteractable.GetComponent<DoorAnimation>().enabled = true;
+				selectedInteractable.GetComponent<DoorAnimation>().Open();
 				return;
 			}
 
