@@ -9,7 +9,7 @@ public class RoomExitTrigger : MonoBehaviour
 	void OnEnable()
 	{
 		m_Room = gameObject.GetComponentInParent<Room>();
-		m_Connector = gameObject.GetComponentInParent<Connector>();
+		m_Connector = gameObject.transform.parent.GetComponentInChildren<Connector>();
 	}
 
 	void OnTriggerEnter (Collider collider)

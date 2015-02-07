@@ -64,9 +64,6 @@ public class RoomsController : MonoBehaviour
 
 		Vector3 d2 = room2.transform.position - p2;
 		room2.transform.position = p1 + d2;
-
-		connector1.m_Room = room2;
-		connector2.m_Room = room1;
 	}
 
 	void BuildRoomsChain(string prevRoomName, Room room)
@@ -85,10 +82,14 @@ public class RoomsController : MonoBehaviour
 			if (roomName.StartsWith(connector.m_RoomName))
 			{
 				// Looping
+				connector.m_Room = room;
+				c.m_Room = room;
 				r.gameObject.SetActive(true);
 			}
 			else
 			{
+				connector.m_Room = r;
+				c.m_Room = room;
 				BuildRoomsChain(roomName, r);
 			}
 		}
@@ -163,6 +164,6 @@ public class RoomsController : MonoBehaviour
 			m_Player.transform.position = connectorTo.transform.position + d;
 		}
 
-		m_CurrentRoom = room;
+		m_CurrentRoom = connector.m_Room;
 	}
 }
