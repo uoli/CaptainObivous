@@ -9,9 +9,9 @@ public class MainNaration : MonoBehaviour {
 	{
 		if (loopCount < narationLines.Length)
 		{
-			audio.PlayOneShot(narationLines[loopCount]);
+			Camera.main.audio.PlayOneShot(narationLines[loopCount]);
 			loopCount++;
-			this.enabled = false;
+			gameObject.SetActive(false);
 		}
 	}
 }
