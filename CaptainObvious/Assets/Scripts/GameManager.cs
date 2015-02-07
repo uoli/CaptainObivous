@@ -26,16 +26,5 @@ public class GameManager : MonoBehaviour {
 	
 	}
 
-	public void OnRoomExit(Room room, Connector connector)
-	{
-		 
 
-		if (!room.m_Looping)
-			return;
-
-		Connector connector1 = room.GetConnector(1);
-		Connector connector2 = room.GetConnector(0);
-		Vector3 d = m_Player.transform.position - connector1.transform.position;
-		m_Player.transform.position = connector2.transform.position + d;
-	}
 }
