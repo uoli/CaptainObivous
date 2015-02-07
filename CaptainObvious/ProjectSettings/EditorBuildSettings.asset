@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Rooms/Room1.unity
   - enabled: 1
     path: Assets/Rooms/Room2.unity
+  - enabled: 1
+    path: Assets/Rooms/Room3.unity
