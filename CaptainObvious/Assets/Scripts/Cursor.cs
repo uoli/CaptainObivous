@@ -6,6 +6,7 @@ public class Cursor : MonoBehaviour {
 	public Texture2D interactCursor;
 	private float distOfObjectInFrontOfPlayer = 2f;
 	private float throwForce = 100f;
+	private float punchForce = 1f;
 	private bool overInteractable = false;
 	private GameObject selectedInteractable;
 	private bool holdsObject = false;
@@ -33,6 +34,14 @@ public class Cursor : MonoBehaviour {
 	void HandleMouseClick() {
 		if (Input.GetMouseButtonDown(0))
 		{
+			//handle punchbag
+			if (overInteractable && selectedInteractable.name.Equals("PunchBag"))
+			{
+				selectedInteractable.rigidbody.AddRelativeForce(-Input.mousePosition * punchForce);
+				//selectedInteractable.rigidbody.AddForceAtPosition(new Vector3(punchForce, 0, punchForce), Input.mousePosition);
+				return;
+			}
+
 			//throw object
 			if (holdsObject)
 			{
