@@ -11,10 +11,10 @@ CaptainObvious/ExportedObj/
 CaptainObvious/obj/
 *.svd
 *.userprefs
-CaptainObvious//*.csproj
+CaptainObvious/*.csproj
 *.pidb
 *.suo
-CaptainObvious//*.sln
+CaptainObvious/*.sln
 *.user
 *.unityproj
 *.booproj
