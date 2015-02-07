@@ -32,7 +32,11 @@ public class Cursor : MonoBehaviour {
 		if (Input.GetMouseButtonDown(0) && overInteractable)
 		{
 			if (selectedInteractable.name.Equals("DoorKnob"))
+			{
 			    Debug.Log("You lose, Captain Obvious!");
+				GameObject.FindGameObjectWithTag("Door").GetComponent<Animator>().enabled = true;
+				Application.LoadLevelAdditiveAsync(1);
+			}
 			if (selectedInteractable.name.Equals("WindowKnob"))
 				Debug.Log("So, you're not such an Average Joe after all!");
 		}
