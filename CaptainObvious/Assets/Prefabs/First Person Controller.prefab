@@ -28,7 +28,6 @@ GameObject:
   - 20: {fileID: 2024502}
   - 92: {fileID: 9224502}
   - 124: {fileID: 12424502}
-  - 114: {fileID: 11424502}
   - 81: {fileID: 8124502}
   - 82: {fileID: 8246368}
   - 114: {fileID: 11419818}
@@ -269,24 +268,6 @@ MonoBehaviour:
   intensity: 0
   maxRange: 2
   cam: {fileID: 2024502}
---- !u!114 &11424502
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68ec2fe99d1108b9d0006a298d76c639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axes: 2
-  sensitivityX: 10
-  sensitivityY: 10
-  minimumX: 0
-  maximumX: 360
-  minimumY: -60
-  maximumY: 60
 --- !u!114 &11424504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -366,11 +347,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   axes: 0
   sensitivityX: 15
-  sensitivityY: 0
+  sensitivityY: 10
   minimumX: -360
   maximumX: 360
-  minimumY: 0
-  maximumY: 0
+  minimumY: -60
+  maximumY: 60
 --- !u!124 &12424502
 Behaviour:
   m_ObjectHideFlags: 1

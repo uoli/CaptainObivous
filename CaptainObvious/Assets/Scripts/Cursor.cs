@@ -50,6 +50,14 @@ public class Cursor : MonoBehaviour {
 				return;
 			}
 
+
+			if (overInteractable && selectedInteractable.GetComponent<Phone>() != null)
+			{
+				var phone = selectedInteractable.GetComponent<Phone>();
+				phone.Interact(player);
+				return;
+			}
+
 			//throw object
 			if (holdsObject)
 			{
