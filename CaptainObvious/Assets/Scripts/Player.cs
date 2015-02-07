@@ -3,6 +3,12 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
+	public CameraShaker camShaker;
+
+	float rageMeter = 0;
+	float rageIncreaseCoolDown = 0;
+	float maxRageCooldown = 2f;
+	float rageDecreaseStep = .5f;
 
 	// Use this for initialization
 	void Start () {
@@ -10,7 +16,33 @@ public class Player : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+	{
+		TickDecayRage();
+	}
+
+	void TickDecayRage()
+	{
+		if (rageIncreaseCoolDown > 0)
+		{
+			rageIncreaseCoolDown -=  Time.deltaTime;
+			rageIncreaseCoolDown = Mathf.Max(rageIncreaseCoolDown, 0);
+		}
+		
+		if (rageIncreaseCoolDown <= 0 && rageMeter > 0)
+		{
+			rageMeter -= rageDecreaseStep * Time.deltaTime;
+			rageMeter = Mathf.Max(rageMeter, 0);
+			camShaker.intensity = rageMeter;
+		}
+	}
+
+	public void IncreaseRage()
+	{
+		rageMeter += 0.2f;
+		rageMeter = Mathf.Min(rageMeter, 1f);
+		rageIncreaseCoolDown = maxRageCooldown;
+		camShaker.intensity = rageMeter;
+		
 	}
 }

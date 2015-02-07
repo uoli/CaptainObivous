@@ -22,4 +22,20 @@ public class Room : MonoBehaviour
 	void Update () {
 	
 	}
+
+	public void SetRoomActive(bool active)
+	{
+//		RoomExitTrigger[] triggers = transform.GetComponentsInChildren<RoomExitTrigger>();
+//		foreach (var trigger in triggers)
+//		{
+//			trigger.enabled = active;
+//		}
+	}
+
+	public void CloseDoorWithConnector(Connector connector, bool seal)
+	{
+		DoorAnimation doorAnim = connector.transform.parent.GetComponentInChildren<DoorAnimation>();
+		if (doorAnim != null)
+			doorAnim.Close(seal);
+	}
 }
