@@ -27,7 +27,7 @@ public class RoomsController : MonoBehaviour
 		}
 	}
 
-	void ConnectRooms(Room room1, int connector1, Room room2, int connector2)
+	public void ConnectRooms(Room room1, int connector1, Room room2, int connector2)
 	{
 		Transform t1 = room1.GetConnector(connector1);
 		Transform t2 = room2.GetConnector(connector2);
@@ -63,6 +63,17 @@ public class RoomsController : MonoBehaviour
 		// Activate player
 		m_Player.SetActive(true);
 	}
+
+	public void ConnectNextRoom(Room currentRoom)
+	{
+		int currentRoomIndex = m_Rooms.FindIndex(r=> {return r == currentRoom;});
+		Room nextRoom = null;
+		if (currentRoomIndex < m_Rooms.Count - 1)
+			nextRoom = m_Rooms[currentRoomIndex+1];
+
+		ConnectRooms(currentRoom, 0, nextRoom, 1);
+	}
+	
 
 	// Use this for initialization
 	void Start()
