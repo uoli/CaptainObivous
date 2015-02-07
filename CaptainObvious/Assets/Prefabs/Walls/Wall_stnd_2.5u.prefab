@@ -7,19 +7,11 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD
   - 4: {fileID: 455194}
   - 33: {fileID: 3355194}
   - 23: {fileID: 2355194}
   - 95: {fileID: 9555194}
   - 64: {fileID: 6497216}
-=======
-  - 4: {fileID: 451396}
-  - 33: {fileID: 3351396}
-  - 23: {fileID: 2351396}
-  - 95: {fileID: 9551396}
-  - 64: {fileID: 6447968}
->>>>>>> 1a4e5e2c2ba02030ca7d3e3ce86767ad4ded122d
   m_Layer: 0
   m_Name: Wall_stnd_2.5u
   m_TagString: Untagged
@@ -66,20 +58,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155194}
   m_Mesh: {fileID: 4300000, guid: 920ed84148b646d438bf5eba7ca12ac2, type: 3}
-<<<<<<< HEAD
 --- !u!64 &6497216
-=======
---- !u!64 &6447968
->>>>>>> 1a4e5e2c2ba02030ca7d3e3ce86767ad4ded122d
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD
   m_GameObject: {fileID: 155194}
-=======
-  m_GameObject: {fileID: 151396}
->>>>>>> 1a4e5e2c2ba02030ca7d3e3ce86767ad4ded122d
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -87,11 +71,7 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: 920ed84148b646d438bf5eba7ca12ac2, type: 3}
-<<<<<<< HEAD
 --- !u!95 &9555194
-=======
---- !u!95 &9551396
->>>>>>> 1a4e5e2c2ba02030ca7d3e3ce86767ad4ded122d
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
