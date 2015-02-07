@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 81dc1be0bdaf72b4a9d4bf5d37b030b2
+guid: 6e19257b7d631724d8f6788f12213eb2
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -7,11 +7,10 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Wall_DoorSegment_10u
-    4300002: Wall_DoorSegment_5u
+    4300000: Wall_Std_5u
     9500000: //RootNode
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
   animations:
@@ -28,12 +27,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: .00999999978
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     weldVertices: 1
@@ -46,7 +45,7 @@ ModelImporter:
     splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 1
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     human: []
