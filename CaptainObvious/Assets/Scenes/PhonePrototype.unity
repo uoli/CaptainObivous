@@ -2805,7 +2805,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   display: {fileID: 345562686}
   phone: {fileID: 426012772}
-  callButton: {fileID: 1405942476}
 --- !u!1 &812889077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3649,7 +3648,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1405942475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4817,7 +4816,7 @@ CharacterController:
   m_GameObject: {fileID: 2056530790}
   serializedVersion: 2
   m_Height: 2
-  m_Radius: .0199999996
+  m_Radius: .400000006
   m_SlopeLimit: 45
   m_StepOffset: .400000006
   m_SkinWidth: .0500000007
