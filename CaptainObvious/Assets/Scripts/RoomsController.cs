@@ -26,9 +26,9 @@ public class RoomsController : MonoBehaviour
 
 	static private RoomsController s_Instance = null;
 
-	public static RoomsController instance
+	public static RoomsController GetInstance()
 	{
-		get { return s_Instance; }
+		return s_Instance;
 	}
 
 	void LoadRoom (string roomName)
@@ -48,13 +48,14 @@ public class RoomsController : MonoBehaviour
 		RoomsData rd = m_Rooms[roomName];
 
 		// TODO: reuse rooms here
-		GameObject room = (GameObject)GameObject.Instantiate(rd.roomTemplate.gameObject);
-		rd.instantiatedRooms.Add(room.GetComponent<Room>());
+		GameObject roomGO = (GameObject)GameObject.Instantiate(rd.roomTemplate.gameObject);
+		Room room = roomGO.GetComponent<Room>(); 
+		rd.instantiatedRooms.Add(room);
 
 		Transform roomTransform = room.transform;
 		roomTransform.SetParent(m_RoomsRoot.transform);
 
-		return room.GetComponent<Room>();
+		return room;
 	}
 
 	void LinkRooms(Room room1, Connector connector1, Room room2, Connector connector2)
@@ -70,6 +71,7 @@ public class RoomsController : MonoBehaviour
 	{
 		string roomName = room.gameObject.name;
 		room.gameObject.SetActive(true);
+		room.SetRoomActive(false);
 		foreach(var connector in room.m_Connectors)
 		{
 			if (prevRoomName != null && prevRoomName.StartsWith(connector.m_RoomName))
@@ -125,6 +127,7 @@ public class RoomsController : MonoBehaviour
 		var playerAnchorTransform = firstRoomTransform.Find("Anchors/Player");
 		m_Player.transform.position = playerAnchorTransform.position;
 		// Activate player
+		m_CurrentRoom.SetRoomActive(true);
 		m_Player.SetActive(true);
 	}
 
@@ -133,6 +136,7 @@ public class RoomsController : MonoBehaviour
 	{
 		if (s_Instance == null)
 			s_Instance = this;
+
 		m_RoomsRoot = gameObject;
 		m_RoomsLoaded = 0;
 
@@ -156,14 +160,18 @@ public class RoomsController : MonoBehaviour
 
 	public void OnRoomExit(Room room, Connector connector)
 	{
+		m_CurrentRoom.SetRoomActive(false);
 		if (m_CurrentRoom == connector.m_Room)
 		{
 			// Looping
 			Connector connectorTo = connector.m_Room.GetConnector(connector.m_ConnectorIndex);
 			Vector3 d = m_Player.transform.position - connector.transform.position;
 			m_Player.transform.position = connectorTo.transform.position + d;
+
+			room.ResetDoorWithConnector(connector);
 		}
 
 		m_CurrentRoom = connector.m_Room;
+		m_CurrentRoom.SetRoomActive(true);
 	}
 }
