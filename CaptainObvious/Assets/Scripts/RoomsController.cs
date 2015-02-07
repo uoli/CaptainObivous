@@ -5,49 +5,58 @@ public class RoomsController : MonoBehaviour
 {
 	// Player's FPS object 
 	public GameObject m_Player;
+
 	// Root object
 	GameObject m_RoomsRoot;
+	int m_RoomsLoaded;
+	static string[] s_RoomNames = new string[]{"Room1"};
+	const int kLevelLoadUpdateCount = 2;
+
 
 	void LoadRoom (string roomName)
 	{
-		Application.LoadLevelAdditiveAsync (roomName);
+	}
 
-		Transform roomTransform = null;
-		foreach (GameObject obj in UnityEngine.Object.FindObjectsOfType(typeof(GameObject)))
+	void LoadRooms()
+	{
+		foreach(var roomName in s_RoomNames)
 		{
-			if (obj.transform.parent == null && obj.name == roomName)
-			{
-				roomTransform = obj.transform;
-				break;
-			}
+			Application.LoadLevelAdditiveAsync (roomName);
 		}
-		roomTransform.SetParent (m_RoomsRoot.transform);
+	}
+
+	void SetupRooms()
+	{
+		foreach(var roomName in s_RoomNames)
+		{
+			Transform roomTransform = GameObject.Find(roomName).transform;
+			roomTransform.SetParent (m_RoomsRoot.transform);
+		}
+
+		m_Player.SetActive(true);
 	}
 
 	// Use this for initialization
 	void Start()
 	{
 		m_RoomsRoot = gameObject;
-
+		m_RoomsLoaded = 0;
 
 		// TODO: Move to loading screen
 		// Load initial level layout
-		LoadRoom ("Room1");
-		LoadRoom ("Room2");
-
-		// TODO: Connect rooms
-
-		// Move player to the first room's anchor
-		var firstRoomTransform = transform.Find("Rooms/Room1");
-		var playerAnchorTransform = firstRoomTransform.Find("Anchors/Player");
-		m_Player.transform.position = playerAnchorTransform.position;
-
-		m_Player.SetActive (true);
+		LoadRooms();
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
-	
+		if (m_RoomsLoaded <= kLevelLoadUpdateCount)
+		{
+			if (m_RoomsLoaded == kLevelLoadUpdateCount)
+				SetupRooms();
+
+			m_RoomsLoaded++;
+			return;
+		}
 	}
 }
