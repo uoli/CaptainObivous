@@ -160,6 +160,8 @@ public class RoomsController : MonoBehaviour
 
 	public void OnRoomExit(Room room, Connector connector)
 	{
+		Debug.Log ("Transition: " + room.name + " -> " + connector.m_Room.name);
+
 		m_CurrentRoom.SetRoomActive(false);
 		if (m_CurrentRoom == connector.m_Room)
 		{

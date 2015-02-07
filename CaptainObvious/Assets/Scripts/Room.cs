@@ -25,17 +25,17 @@ public class Room : MonoBehaviour
 
 	public void SetRoomActive(bool active)
 	{
-		RoomExitTrigger[] triggers = transform.GetComponentsInChildren<RoomExitTrigger>();
-		foreach (var trigger in triggers)
-		{
-			trigger.enabled = active;
-		}
+//		RoomExitTrigger[] triggers = transform.GetComponentsInChildren<RoomExitTrigger>();
+//		foreach (var trigger in triggers)
+//		{
+//			trigger.enabled = active;
+//		}
 	}
 
 	public void ResetDoorWithConnector(Connector connector)
 	{
 		DoorAnimation doorAnim = connector.transform.parent.GetComponentInChildren<DoorAnimation>();
 		if (doorAnim != null)
-			doorAnim.Reset();
+		doorAnim.Reset();
 	}
 }
