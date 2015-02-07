@@ -14,13 +14,12 @@ public class Cursor : MonoBehaviour {
 	void Update () {
 		var ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit = new RaycastHit();
-		if (Physics.Raycast (ray, out hit, 1000)) {
+		if (Physics.Raycast (ray, out hit, 10)) {
 			if (hit.collider.gameObject.tag.Equals("Interactable"))
 			{
 			    UnityEngine.Cursor.SetCursor(interactCursor, Vector3.zero, CursorMode.Auto);
 				overInteractable = true;
 				selectedInteractable = hit.collider.gameObject;
-
 			}
 			else
 			{
@@ -41,16 +40,26 @@ public class Cursor : MonoBehaviour {
 				selectedInteractable.rigidbody.isKinematic = false;
 				selectedInteractable.rigidbody.AddForce(transform.forward * throwForce);
 				holdsObject = false;
+				return;
 			}
+
+			//handle door
+			if (overInteractable && selectedInteractable.GetComponent<DoorAnimation>() != null)
+			{
+				selectedInteractable.GetComponent<DoorAnimation>().enabled = true;
+				return;
+			}
+
 			//pick object
-			else if (overInteractable)
+			if (overInteractable)
 			{
 				selectedInteractable.rigidbody.isKinematic = true;
 				selectedInteractable.transform.parent = Camera.main.transform;
 				selectedInteractable.transform.position = transform.position + transform.forward * distOfObjectInFrontOfPlayer;
 				holdsObject = true;
+				return;
 			}
-			
+
 			/*if (selectedInteractable.name.Equals("DoorKnob"))
 			{
 			    Debug.Log("You lose, Captain Obvious!");
