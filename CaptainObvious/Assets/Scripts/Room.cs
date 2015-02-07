@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
 public class Room : MonoBehaviour
 {
-	public List<Transform> m_Connectors = new List<Transform>();
+	public List<Connector> m_Connectors = new List<Connector>();
+	public bool m_Looping = false;
 
-	public Transform GetConnector(int index)
+	public Connector GetConnector(int index)
 	{
 		return m_Connectors[index];
 	}
