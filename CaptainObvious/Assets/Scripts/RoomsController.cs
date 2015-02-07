@@ -9,12 +9,27 @@ public class RoomsController : MonoBehaviour
 
 	// Root object
 	GameObject m_RoomsRoot;
-	Dictionary<string, Room> m_Rooms = new Dictionary<string, Room>();
-	List<Room> m_RoomsCopy = new List<Room>();
-	int m_RoomsLoaded;
-	static string[] s_RoomNames = new string[]{"Room1", "Room2"};
-	const int kLevelLoadUpdateCount = 2;
 
+	class RoomsData
+	{
+		public Room roomTemplate;
+		public List<Room> instantiatedRooms = new List<Room>();
+	}
+	Dictionary<string, RoomsData> m_Rooms = new Dictionary<string, RoomsData>();
+
+
+	static string[] s_RoomNames = new string[]{"Room1", "Room2", "Room3"};
+	const int kLevelLoadUpdateCount = 5;
+	int m_RoomsLoaded;
+
+	Room m_CurrentRoom;
+
+	static private RoomsController s_Instance = null;
+
+	public static RoomsController instance
+	{
+		get { return s_Instance; }
+	}
 
 	void LoadRoom (string roomName)
 	{
@@ -28,32 +43,53 @@ public class RoomsController : MonoBehaviour
 		}
 	}
 
-	void AlignRooms(Room room1, Connector connector1, Room room2, Connector connector2)
+	Room GetRoomInstance(string roomName)
+	{
+		RoomsData rd = m_Rooms[roomName];
+
+		// TODO: reuse rooms here
+		GameObject room = (GameObject)GameObject.Instantiate(rd.roomTemplate.gameObject);
+		rd.instantiatedRooms.Add(room.GetComponent<Room>());
+
+		Transform roomTransform = room.transform;
+		roomTransform.SetParent(m_RoomsRoot.transform);
+
+		return room.GetComponent<Room>();
+	}
+
+	void LinkRooms(Room room1, Connector connector1, Room room2, Connector connector2)
 	{
 		Vector3 p1 = connector1.transform.position;
 		Vector3 p2 = connector2.transform.position;
 
 		Vector3 d2 = room2.transform.position - p2;
 		room2.transform.position = p1 + d2;
+
+		connector1.m_Room = room2;
+		connector2.m_Room = room1;
 	}
 
-	void BuildRoomsChain(Room startRoom)
+	void BuildRoomsChain(string prevRoomName, Room room)
 	{
-		startRoom.gameObject.SetActive(true);
-		foreach(var connector in startRoom.m_Connectors)
+		string roomName = room.gameObject.name;
+		room.gameObject.SetActive(true);
+		foreach(var connector in room.m_Connectors)
 		{
-			Room r = m_Rooms[connector.m_RoomName];
-			Connector c = r.GetConnector(connector.m_ConnectorIndex);
+			if (prevRoomName != null && prevRoomName.StartsWith(connector.m_RoomName))
+				continue;
 
-			if (r != startRoom)
+			Room r = GetRoomInstance(connector.m_RoomName);
+			Connector c = r.GetConnector(connector.m_ConnectorIndex);
+			LinkRooms(room, connector, r, c);
+
+			if (roomName.StartsWith(connector.m_RoomName))
 			{
-				AlignRooms(startRoom, connector, r, c);
+				// Looping
 				r.gameObject.SetActive(true);
 			}
 			else
 			{
-				// Looping
-
+				BuildRoomsChain(roomName, r);
 			}
 		}
 	}
@@ -63,24 +99,28 @@ public class RoomsController : MonoBehaviour
 		// Attach rooms to the root
 		foreach(var roomName in s_RoomNames)
 		{
-			Room room = GameObject.Find(roomName).GetComponent<Room>();
+			var roomGO = GameObject.Find(roomName);
+			if (roomGO == null)
+				continue;
+			Room room = roomGO.GetComponent<Room>();
 			if (room == null)
 				continue;
 
-			m_Rooms.Add(roomName, room);
-			Transform roomTransform = room.transform;
-			roomTransform.SetParent (m_RoomsRoot.transform);
 			room.gameObject.SetActive(false);
+			RoomsData rd = new RoomsData();
+			rd.roomTemplate = room;
+			m_Rooms.Add(roomName, rd);
 
-			GameObject roomCopy = (GameObject)GameObject.Instantiate(room.gameObject);
-			m_RoomsCopy.Add(roomCopy.GetComponent<Room>());
+			Transform roomTransform = room.transform;
+			roomTransform.SetParent(m_RoomsRoot.transform);
 		}
 
-		// Connect rooms
-		BuildRoomsChain(m_Rooms["Room1"]);
+		// Build level
+		m_CurrentRoom = GetRoomInstance("Room1");
+		BuildRoomsChain(null, m_CurrentRoom);
 
 		// Move player to the first room's anchor
-		var firstRoomTransform = m_Rooms["Room1"].transform;
+		var firstRoomTransform = m_CurrentRoom.transform;
 		var playerAnchorTransform = firstRoomTransform.Find("Anchors/Player");
 		m_Player.transform.position = playerAnchorTransform.position;
 		// Activate player
@@ -90,6 +130,8 @@ public class RoomsController : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		if (s_Instance == null)
+			s_Instance = this;
 		m_RoomsRoot = gameObject;
 		m_RoomsLoaded = 0;
 
@@ -109,5 +151,18 @@ public class RoomsController : MonoBehaviour
 			m_RoomsLoaded++;
 			return;
 		}
+	}
+
+	public void OnRoomExit(Room room, Connector connector)
+	{
+		if (m_CurrentRoom == connector.m_Room)
+		{
+			// Looping
+			Connector connectorTo = connector.m_Room.GetConnector(connector.m_ConnectorIndex);
+			Vector3 d = m_Player.transform.position - connector.transform.position;
+			m_Player.transform.position = connectorTo.transform.position + d;
+		}
+
+		m_CurrentRoom = room;
 	}
 }

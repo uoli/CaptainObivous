@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour {
 
 	public void OnRoomExit(Room room, Connector connector)
 	{
+		 
+
 		if (!room.m_Looping)
 			return;
 

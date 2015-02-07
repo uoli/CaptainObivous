@@ -399,7 +399,7 @@ GameObject:
   - 4: {fileID: 629956910}
   - 114: {fileID: 629956911}
   m_Layer: 0
-  m_Name: Room2
+  m_Name: Room3
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1105,7 +1105,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11430838, guid: b9c612627d36a6e4d8912e775b660f81, type: 2}
       propertyPath: m_RoomName
-      value: Room1
+      value: Room2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9c612627d36a6e4d8912e775b660f81, type: 2}
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Room1
+  m_RoomName: Room2
   m_ConnectorIndex: 0
 --- !u!1 &1816282073
 GameObject:
