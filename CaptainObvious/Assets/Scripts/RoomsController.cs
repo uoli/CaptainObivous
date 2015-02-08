@@ -231,11 +231,10 @@ public class RoomsController : MonoBehaviour
 	{
 		Debug.Log ("Transition: " + room.name + " -> " + connector.m_Room.name);
 
-		m_CurrentRoom.SetRoomActive(false);
 		if (m_CurrentRoom.name.StartsWith(connector.m_RoomName))
 		{
 			// Looping
-			Connector connectorTo = connector.m_Room.GetConnector(connector.m_ConnectorIndex);
+			Connector connectorTo = m_CurrentRoom.GetConnector(connector.m_ConnectorIndex);
 			Vector3 d = m_Player.transform.position - connector.transform.position;
 			m_Player.transform.position = connectorTo.transform.position + d;
 			room.OnEnterLoop();
@@ -243,10 +242,10 @@ public class RoomsController : MonoBehaviour
 		}
 		else
 		{
+			m_CurrentRoom.SetRoomActive(false);
+			m_CurrentRoom = connector.m_Room;
+			m_CurrentRoom.SetRoomActive(true);
 			room.CloseDoorWithConnector(connector, true);
 		}
-
-		m_CurrentRoom = connector.m_Room;
-		m_CurrentRoom.SetRoomActive(true);
 	}
 }

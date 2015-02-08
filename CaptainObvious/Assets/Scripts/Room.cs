@@ -28,7 +28,8 @@ public class Room : MonoBehaviour
 	private LoopingData[] s_LoopingData = new LoopingData[]
 	{
 		new LoopingData("Anger", 1, "Bargaining", 0),
-		new LoopingData("Anger", 1, "Bargaining", 0)
+		new LoopingData("Bargaining", 1, "Depression", 0),
+		new LoopingData("Depression", 1, "Acceptance", 0)
 	};
 	LoopingData m_LoopingData = null;
 
