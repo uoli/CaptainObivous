@@ -309,7 +309,7 @@ BoxCollider:
   m_GameObject: {fileID: 62443908}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -513,8 +513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Denial
-  m_ConnectorIndex: 1
+  m_RoomName: Anger
+  m_ConnectorIndex: 0
   m_Room: {fileID: 0}
 --- !u!23 &112616487
 Renderer:
@@ -840,8 +840,8 @@ Transform:
   m_LocalPosition: {x: 6.03499985, y: .0219999999, z: -8.69900036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 629956910}
+  m_RootOrder: 5
 --- !u!1001 &335640106
 Prefab:
   m_ObjectHideFlags: 0
@@ -972,6 +972,10 @@ Prefab:
     - target: {fileID: 2389182, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_LightmapTilingOffset.w
       value: .627372742
+      objectReference: {fileID: 0}
+    - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_Name
+      value: DoorExit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
@@ -1670,7 +1674,7 @@ GameObject:
   - 4: {fileID: 629956910}
   - 114: {fileID: 629956911}
   m_Layer: 0
-  m_Name: Room1
+  m_Name: Bargaining
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1690,8 +1694,12 @@ Transform:
   - {fileID: 939567996}
   - {fileID: 851479729}
   - {fileID: 1993821460}
+  - {fileID: 1867220630}
+  - {fileID: 238299123}
+  - {fileID: 776561463}
+  - {fileID: 1068500064}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!114 &629956911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,6 +1713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Connectors:
   - {fileID: 1428289320}
+  - {fileID: 112616486}
   m_Looping: 0
 --- !u!1 &635964537
 GameObject:
@@ -2015,8 +2024,8 @@ Transform:
   m_LocalPosition: {x: .451999992, y: 1.93400002, z: -3.56399989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 629956910}
+  m_RootOrder: 6
 --- !u!1 &784417855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,7 +2421,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 629956910}
     m_Modifications:
     - target: {fileID: 459920, guid: 6b943451ddf064f45872aab0e183d0be, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2444,7 +2453,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 459920, guid: 6b943451ddf064f45872aab0e183d0be, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 459920, guid: 6b943451ddf064f45872aab0e183d0be, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b943451ddf064f45872aab0e183d0be, type: 2}
@@ -2460,7 +2473,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 939567996}
   m_Layer: 0
-  m_Name: DoorFixed
+  m_Name: DoorEnrty
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2808,10 +2821,10 @@ Transform:
   m_GameObject: {fileID: 1068500060}
   m_LocalRotation: {x: .50000006, y: .50000006, z: .499999881, w: -.500000119}
   m_LocalPosition: {x: 10.5190001, y: 0, z: -3.26999998}
-  m_LocalScale: {x: .999999523, y: 1.00021982, z: 1}
+  m_LocalScale: {x: 1, y: 1.00021982, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 629956910}
+  m_RootOrder: 7
 --- !u!1001 &1068834878
 Prefab:
   m_ObjectHideFlags: 0
@@ -2896,7 +2909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1074123890
 Transform:
   m_ObjectHideFlags: 0
@@ -2918,7 +2931,7 @@ BoxCollider:
   m_GameObject: {fileID: 1074123889}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2978,7 +2991,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bd1bb464185d546a9e78e6c7c18557, type: 2}
+  - {fileID: 2100000, guid: 2821f0f58b8e4814d85fbb6b5f1da331, type: 2}
   - {fileID: 2100000, guid: 86c9fb5003aa3a54d8a297defaf756c5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -3429,7 +3442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1235591245
 Transform:
   m_ObjectHideFlags: 0
@@ -3805,8 +3818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Denial
-  m_ConnectorIndex: 1
+  m_RoomName: Anger
+  m_ConnectorIndex: 0
   m_Room: {fileID: 0}
 --- !u!1 &1485234373
 GameObject:
@@ -4236,7 +4249,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bd1bb464185d546a9e78e6c7c18557, type: 2}
+  - {fileID: 2100000, guid: 2821f0f58b8e4814d85fbb6b5f1da331, type: 2}
   - {fileID: 2100000, guid: 86c9fb5003aa3a54d8a297defaf756c5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -4311,6 +4324,22 @@ Prefab:
     - target: {fileID: 2389182, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_LightmapTilingOffset.w
       value: .770927429
+      objectReference: {fileID: 0}
+    - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_Name
+      value: DoorEnrty
+      objectReference: {fileID: 0}
+    - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 189174, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 189178, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
@@ -4594,7 +4623,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 629956910}
     m_Modifications:
     - target: {fileID: 446844, guid: 5beebe7bdbb79834a96508dcdde17f40, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4626,7 +4655,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 446844, guid: 5beebe7bdbb79834a96508dcdde17f40, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2346844, guid: 5beebe7bdbb79834a96508dcdde17f40, type: 2}
       propertyPath: m_LightmapIndex
@@ -4706,8 +4735,8 @@ Transform:
   m_LocalPosition: {x: 9.66399956, y: 4.65399981, z: -3.06800008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 629956910}
+  m_RootOrder: 4
 --- !u!1 &1867221205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5110,7 +5139,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1993821460}
   m_Layer: 0
-  m_Name: DoorFixed
+  m_Name: DoorExit
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
