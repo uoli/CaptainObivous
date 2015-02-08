@@ -6,11 +6,12 @@ public class TitleManager : MonoBehaviour
 {
 	public AudioClip introSoundBit;
 	public AudioSource audioSource;
+	public GameObject backGroundMusic;
 	public Button titleButton;
 
 	// Use this for initialization
 	void Start () {
-	
+		GameObject.DontDestroyOnLoad(backGroundMusic);
 	}
 	
 	// Update is called once per frame
