@@ -6,12 +6,44 @@ using System.Collections.Generic;
 public class Room : MonoBehaviour
 {
 	public List<Connector> m_Connectors = new List<Connector>();
+	bool m_PrevLooping = false;
 	public bool m_Looping = false;
 	private MainNaration mainNarration;
+
+	class LoopingData
+	{
+		public LoopingData(string _roomName, int _roomConnector, string _nextRoomName, int _nextRoomConnector)
+		{
+			roomName = _roomName;
+			roomConnector = _roomConnector;
+			nextRoomName = _nextRoomName;
+			nextRoomConnector = _nextRoomConnector;
+		}
+
+		public string roomName;
+		public int roomConnector;
+		public string nextRoomName;
+		public int nextRoomConnector;
+	}
+	private LoopingData[] s_LoopingData = new LoopingData[]
+	{
+		new LoopingData("Anger", 1, "Bargaining", 0),
+		new LoopingData("Anger", 1, "Bargaining", 0)
+	};
+	LoopingData m_LoopingData = null;
 
 	public Connector GetConnector(int index)
 	{
 		return m_Connectors[index];
+	}
+
+	void Start()
+	{
+		foreach (var ld in s_LoopingData)
+		{
+			if (name.StartsWith(ld.roomName))
+				m_LoopingData = ld;
+		}
 	}
 
 	// Use this for initialization
@@ -23,7 +55,11 @@ public class Room : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		if (m_Looping != m_PrevLooping)
+		{
+			m_PrevLooping = m_Looping;
+			Unloop();
+		}
 	}
 
 	public void OnEnterLoop ()
@@ -31,6 +67,25 @@ public class Room : MonoBehaviour
 		mainNarration.gameObject.SetActive(true);
 	}
 
+	public void Unloop()
+	{
+		Connector connector = GetConnector(m_LoopingData.roomConnector);
+		string nextRoom;
+		int nextConnector;
+		if (false)
+		{
+			nextRoom = m_LoopingData.roomName;
+			nextConnector = m_LoopingData.roomConnector;
+		}
+		else
+		{
+			nextRoom = m_LoopingData.nextRoomName;
+			nextConnector = m_LoopingData.nextRoomConnector;
+		}
+		
+		RoomsController.GetInstance().RebuildRoomsChain(this, connector, nextRoom, nextConnector);
+	}
+	
 	private void ResetPhone()
 	{
 		var phone = GameObject.Find("Phone");
