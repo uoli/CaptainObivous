@@ -7,11 +7,19 @@ public class MainNaration : MonoBehaviour {
 
 	void OnTriggerEnter (Collider col)
 	{
-		if (loopCount < narationLines.Length)
-		{
-			Camera.main.audio.PlayOneShot(narationLines[loopCount]);
-			loopCount++;
-			gameObject.SetActive(false);
-		}
+		if (loopCount >= narationLines.Length)
+			return;
+		
+		Camera.main.audio.clip = narationLines[loopCount];
+		Debug.Log(narationLines[loopCount]);
+		Camera.main.audio.Play();
+		loopCount++;
+		gameObject.SetActive(false);
+
+	}
+
+	void SkipCurrentNarration()
+	{
+		Camera.main.audio.Stop();
 	}
 }

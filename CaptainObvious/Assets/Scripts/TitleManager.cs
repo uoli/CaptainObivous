@@ -21,9 +21,16 @@ public class TitleManager : MonoBehaviour
 
 	public void OnTitleClicked()
 	{
+		titleButton.interactable = false;
+		
+		if (introSoundBit == null)
+		{
+			OnAudioFinished();
+			return;
+		}
+
 		audioSource.clip = introSoundBit;
 		audioSource.Play();
-		titleButton.interactable = false;
 		StartCoroutine(WaitForCallToFinish());
 	}
 

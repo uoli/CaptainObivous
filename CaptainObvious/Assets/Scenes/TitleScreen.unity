@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 332ce13e30f112f4eafe3ee6df81ab7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  introSoundBit: {fileID: 8300000, guid: 6e7dd0a1c0fea894a819664564ae86f0, type: 3}
+  introSoundBit: {fileID: 0}
   audioSource: {fileID: 877104529}
   backGroundMusic: {fileID: 1509878724}
   titleButton: {fileID: 560407151}
