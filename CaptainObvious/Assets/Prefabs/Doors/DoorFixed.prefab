@@ -161,8 +161,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189180}
-  m_LocalRotation: {x: 0, y: 4.13663059e-07, z: 0, w: -1}
-  m_LocalPosition: {x: -1.61399996, y: .00200000009, z: -2.47199988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: -1}
+  m_LocalPosition: {x: -1.61500001, y: .00200000009, z: 2.52900004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489174}
@@ -235,7 +235,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bd1bb464185d546a9e78e6c7c18557, type: 2}
+  - {fileID: 2100000, guid: 2821f0f58b8e4814d85fbb6b5f1da331, type: 2}
   - {fileID: 2100000, guid: 86c9fb5003aa3a54d8a297defaf756c5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -254,9 +254,9 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 0
-  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .821708679, w: .759208679}
+  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .509208679, w: .721122742}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 24df26adf06d5e54f82240d05b0ba0dd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -368,8 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Denial
-  m_ConnectorIndex: 1
+  m_RoomName: Anger
+  m_ConnectorIndex: 0
   m_Room: {fileID: 0}
 --- !u!114 &11489180
 MonoBehaviour:
