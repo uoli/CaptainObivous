@@ -253,8 +253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11408764}
-  normalCursor: {fileID: 2800000, guid: ac159b6986fa3c44a8bfa31ff1b59594, type: 3}
-  interactCursor: {fileID: 2800000, guid: 48b171bd512713f4b8d217680f5764f3, type: 3}
+  normalCursor: {fileID: 2800000, guid: 32dc4da607146d24498027a312233945, type: 3}
+  interactCursor: {fileID: 2800000, guid: db0ff0bbb4a0bf34c95139e7de35bee0, type: 3}
+  nonInteractCursor: {fileID: 2800000, guid: 3691ef757ac9352488e8692730c75513, type: 3}
 --- !u!114 &11419818
 MonoBehaviour:
   m_ObjectHideFlags: 1

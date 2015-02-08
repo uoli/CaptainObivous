@@ -6,9 +6,9 @@ public class Cursor : MonoBehaviour {
 	public Texture2D normalCursor;
 	public Texture2D interactCursor;
 	public Texture2D nonInteractCursor;
-	private float distOfObjectInFrontOfPlayer = 2f;
+	private float distOfObjectInFrontOfPlayer = 1f;
 	private float throwForce = 100f;
-	private float punchForce = 1f;
+	private float punchForce = 2f;
 	private bool overInteractable = false;
 	private GameObject selectedInteractable;
 	private bool holdsObject = false;
