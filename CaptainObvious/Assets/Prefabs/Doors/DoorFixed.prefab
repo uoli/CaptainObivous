@@ -35,7 +35,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &189176
 GameObject:
   m_ObjectHideFlags: 1
@@ -161,8 +161,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189180}
-  m_LocalRotation: {x: 0, y: 4.13663059e-07, z: 0, w: -1}
-  m_LocalPosition: {x: -1.61399996, y: .00200000009, z: -2.47199988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.660000026, y: .0219999999, z: 2.54999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489174}
@@ -253,10 +253,10 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 0
-  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .821708679, w: .759208679}
+  m_LightmapIndex: 2
+  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .295341492, w: .430107117}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 24df26adf06d5e54f82240d05b0ba0dd, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -338,7 +338,7 @@ BoxCollider:
   m_GameObject: {fileID: 189178}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
