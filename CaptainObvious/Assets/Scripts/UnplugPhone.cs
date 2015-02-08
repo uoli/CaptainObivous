@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UnplugPhone : MonoBehaviour {
+public class UnplugPhone : MonoBehaviour
+{
+	public Room room;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	public void OnMouseDown()
+	{
+		if (Camera.main.audio.isPlaying)
+			return;
+
+		room.Unloop();
 	}
 }

@@ -4,13 +4,14 @@ using System.Collections;
 public class BinPuzzle : MonoBehaviour {
 	public AudioClip firstMessage;
 	public AudioClip secondMessage;
+	public Room room;
 	private int numberOfNotesInBin = 0;
 
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.other.gameObject.name.Equals("CrushedPaperNote"))
 			numberOfNotesInBin++;
-		if (numberOfNotesInBin == 1)
+		if (numberOfNotesInBin == 1 && firstMessage != null)
 		{
 			Camera.main.audio.clip = firstMessage;
 			Camera.main.audio.Play();
@@ -19,7 +20,10 @@ public class BinPuzzle : MonoBehaviour {
 		{
 			Camera.main.audio.clip = secondMessage;
 			Camera.main.audio.Play();
-			Room room = gameObject.transform.root.GetComponent<Room>();
+		}
+		Debug.Log (numberOfNotesInBin);
+		if (numberOfNotesInBin >= 3)
+		{
 			if (room != null)
 			{
 				room.Unloop();

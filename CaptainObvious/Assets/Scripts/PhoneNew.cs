@@ -9,30 +9,35 @@ public class PhoneNew : MonoBehaviour
 	private int _dialedNumberLength;
 	private char[] _dialedNumber = new char[8];
 
-	public void DialDigit(char digit)
+	const string CorrectNumber = "22808790";
+
+	public bool DialDigit(char digit)
 	{
 		if (digit < '0' || digit > '9')
-			return;
+			return false;
 
 		_dialedNumber[_dialedNumberLength] = digit;
 		++_dialedNumberLength;
 
-		if (_dialedNumberLength == 8)
+		var number = new string(_dialedNumber, 0, _dialedNumberLength);
+		if (!CorrectNumber.StartsWith(number))
 		{
-			var number = new string(_dialedNumber);
-			if (number == "22808790")
-			{
-				Camera.main.audio.clip = soundBite;
-				Camera.main.audio.Play();
-				StartCoroutine(WhenFinishedPlaySoundbite2());
-			}
-			else
-			{
-				////TODO: give some indication of failure	
-			}
+			ResetDialedNumber();
+			return false;
+		}
 
+		if (_dialedNumberLength < 8)
+			return true;
+
+		if (number == "22808790")
+		{
+			Camera.main.audio.clip = soundBite;
+			Camera.main.audio.Play();
+			StartCoroutine(WhenFinishedPlaySoundbite2());
 			ResetDialedNumber();
 		}
+
+		return false;
 	}
 
 	public void ResetDialedNumber()

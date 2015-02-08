@@ -7,27 +7,19 @@ public class FlickeringLights : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		Invoke("TurnOffLights", Random.Range(minFlickerSpeed,maxFlickerSpeed));
 	}
 	
 
-	
-	void Update()
-	{
-		if (light.enabled == false) { 
-			Invoke ("TurnOnLights", Random.Range (minFlickerSpeed, maxFlickerSpeed));
-		}
-			else {
-			Invoke("TurnOffLights", Random.Range(minFlickerSpeed,maxFlickerSpeed));
-			}
 
-		}
 	void TurnOnLights () {
 		light.enabled = true;
+		Invoke("TurnOffLights", Random.Range(minFlickerSpeed,maxFlickerSpeed));
 	}
 
 	void TurnOffLights () {
 		light.enabled = false;
+		Invoke ("TurnOnLights", Random.Range (minFlickerSpeed, maxFlickerSpeed));
 	}
 
     }
