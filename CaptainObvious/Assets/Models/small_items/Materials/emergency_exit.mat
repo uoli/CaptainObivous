@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: emergency_exit_mat
-  m_Shader: {fileID: 12, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: emergency_exit
+  m_Shader: {fileID: 10, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
@@ -31,7 +31,7 @@ Material:
       data:
         first:
           name: _Shininess
-        second: .209156469
+        second: 1
       data:
         first:
           name: _EmissionLM
@@ -40,12 +40,8 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .461288929, g: .639705896, b: .404519916, a: 1}
+        second: {r: .335261673, g: .860294104, b: .46923539, a: 1}
       data:
         first:
           name: _SpecColor
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _Emission
-        second: {r: 0, g: 0, b: 0, a: 0}
+        second: {r: .017241383, g: .147058845, b: 0, a: 1}
