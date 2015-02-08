@@ -18,7 +18,7 @@ public class RoomsController : MonoBehaviour
 	Dictionary<string, RoomsData> m_Rooms = new Dictionary<string, RoomsData>();
 
 
-	static string[] s_RoomNames = new string[]{"Denial", "Room2", "Room3"};
+	static string[] s_RoomNames = new string[]{"Denial", "Anger", "Room3"};
 	const int kLevelLoadUpdateCount = 5;
 	int m_RoomsLoaded;
 
