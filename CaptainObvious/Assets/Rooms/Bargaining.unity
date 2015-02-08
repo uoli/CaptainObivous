@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &62443909
 Transform:
   m_ObjectHideFlags: 0
@@ -975,7 +975,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_Name
-      value: DoorExit
+      value: DoorEntry
+      objectReference: {fileID: 0}
+    - target: {fileID: 189174, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 189178, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
@@ -1712,8 +1720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Connectors:
-  - {fileID: 1428289320}
   - {fileID: 112616486}
+  - {fileID: 1428289320}
   m_Looping: 0
 --- !u!1 &635964537
 GameObject:
@@ -2473,7 +2481,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 939567996}
   m_Layer: 0
-  m_Name: DoorEnrty
+  m_Name: DoorExit
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2909,7 +2917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1074123890
 Transform:
   m_ObjectHideFlags: 0
@@ -3118,7 +3126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1109488079
 Transform:
   m_ObjectHideFlags: 0
@@ -3442,7 +3450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1235591245
 Transform:
   m_ObjectHideFlags: 0
@@ -3818,7 +3826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Anger
+  m_RoomName: Depression
   m_ConnectorIndex: 0
   m_Room: {fileID: 0}
 --- !u!1 &1485234373
@@ -4327,7 +4335,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_Name
-      value: DoorEnrty
+      value: DoorExit
       objectReference: {fileID: 0}
     - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_IsActive
@@ -4335,11 +4343,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 189174, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 189178, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489178, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_RoomName
+      value: Depression
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
@@ -5139,7 +5151,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1993821460}
   m_Layer: 0
-  m_Name: DoorExit
+  m_Name: DoorEntry
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
