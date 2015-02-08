@@ -708,6 +708,7 @@ GameObject:
   - 33: {fileID: 212246128}
   - 23: {fileID: 212246127}
   - 95: {fileID: 212246126}
+  - 64: {fileID: 212246129}
   m_Layer: 0
   m_Name: Wall_Corner_Right
   m_TagString: Untagged
@@ -772,6 +773,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 35467315}
   m_GameObject: {fileID: 212246124}
   m_Mesh: {fileID: 4300008, guid: 10f39299cca31fb4ca9b744c12a1c015, type: 3}
+--- !u!64 &212246129
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6449040, guid: 6199723be6c5b6a4299109c1e8711d43,
+    type: 2}
+  m_PrefabInternal: {fileID: 35467315}
+  m_GameObject: {fileID: 212246124}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300006, guid: 10f39299cca31fb4ca9b744c12a1c015, type: 3}
 --- !u!1001 &237403740
 Prefab:
   m_ObjectHideFlags: 0
@@ -917,6 +932,7 @@ GameObject:
   - 33: {fileID: 261102536}
   - 23: {fileID: 261102535}
   - 95: {fileID: 261102534}
+  - 64: {fileID: 261102538}
   m_Layer: 0
   m_Name: Wall_Corner_Right
   m_TagString: Untagged
@@ -981,6 +997,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 851479729}
   m_RootOrder: 2
+--- !u!64 &261102538
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6449040, guid: 6199723be6c5b6a4299109c1e8711d43,
+    type: 2}
+  m_PrefabInternal: {fileID: 1007578512}
+  m_GameObject: {fileID: 261102533}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300006, guid: 10f39299cca31fb4ca9b744c12a1c015, type: 3}
 --- !u!1001 &361592674
 Prefab:
   m_ObjectHideFlags: 0
@@ -1522,6 +1552,7 @@ GameObject:
   - 33: {fileID: 551436496}
   - 23: {fileID: 551436495}
   - 95: {fileID: 551436494}
+  - 64: {fileID: 551436497}
   m_Layer: 0
   m_Name: Wall_Corner_Right
   m_TagString: Untagged
@@ -1586,6 +1617,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1221573154}
   m_GameObject: {fileID: 551436492}
   m_Mesh: {fileID: 4300008, guid: 10f39299cca31fb4ca9b744c12a1c015, type: 3}
+--- !u!64 &551436497
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6449040, guid: 6199723be6c5b6a4299109c1e8711d43,
+    type: 2}
+  m_PrefabInternal: {fileID: 1221573154}
+  m_GameObject: {fileID: 551436492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300006, guid: 10f39299cca31fb4ca9b744c12a1c015, type: 3}
 --- !u!1001 &568322611
 Prefab:
   m_ObjectHideFlags: 0
@@ -4033,6 +4078,7 @@ GameObject:
   - 33: {fileID: 1744550651}
   - 23: {fileID: 1744550650}
   - 95: {fileID: 1744550649}
+  - 64: {fileID: 1744550652}
   m_Layer: 0
   m_Name: Wall_Corner_Right
   m_TagString: Untagged
@@ -4097,6 +4143,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 161863724}
   m_GameObject: {fileID: 1744550647}
   m_Mesh: {fileID: 4300008, guid: 10f39299cca31fb4ca9b744c12a1c015, type: 3}
+--- !u!64 &1744550652
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6449040, guid: 6199723be6c5b6a4299109c1e8711d43,
+    type: 2}
+  m_PrefabInternal: {fileID: 161863724}
+  m_GameObject: {fileID: 1744550647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300006, guid: 10f39299cca31fb4ca9b744c12a1c015, type: 3}
 --- !u!1 &1759119998
 GameObject:
   m_ObjectHideFlags: 0
