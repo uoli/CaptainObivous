@@ -178,7 +178,7 @@ public class RoomsController : MonoBehaviour
 			Connector connectorTo = connector.m_Room.GetConnector(connector.m_ConnectorIndex);
 			Vector3 d = m_Player.transform.position - connector.transform.position;
 			m_Player.transform.position = connectorTo.transform.position + d;
-			room.CloseDoorWithConnector(connector, false);
+			room.CloseDoorWithConnectorForLooping(connector);
 		}
 		else
 		{
