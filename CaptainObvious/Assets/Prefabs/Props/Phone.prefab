@@ -11,12 +11,13 @@ GameObject:
   - 33: {fileID: 3399672}
   - 23: {fileID: 2399672}
   - 95: {fileID: 9599672}
+  - 114: {fileID: 11419122}
   m_Layer: 0
   m_Name: Phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &499672
 Transform:
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199672}
   m_LocalRotation: {x: 7.07787109e-08, y: .495034724, z: -4.03256983e-08, w: -.868873239}
-  m_LocalPosition: {x: 6.56500006, y: .694999993, z: -7.33699989}
-  m_LocalScale: {x: .243472829, y: .24347274, z: .24347274}
+  m_LocalPosition: {x: 6.61999989, y: .686999977, z: -7.47300005}
+  m_LocalScale: {x: .243472844, y: .24347274, z: .24347274}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,6 +73,18 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11419122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d8e142bbc7e841d2adf76b4df997863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundBite: {fileID: 8300000, guid: 111dfcfa144e87545b722d13a5f8008a, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
