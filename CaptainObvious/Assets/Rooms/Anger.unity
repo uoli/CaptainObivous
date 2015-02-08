@@ -7169,6 +7169,10 @@ Prefab:
       propertyPath: secondMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11479804, guid: dd5e1ad22bba1d441bdb3cda75bedf14, type: 2}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 629956911}
     m_RemovedComponents:
     - {fileID: 6401770, guid: dd5e1ad22bba1d441bdb3cda75bedf14, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: dd5e1ad22bba1d441bdb3cda75bedf14, type: 2}
@@ -8731,6 +8735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstMessage: {fileID: 0}
   secondMessage: {fileID: 0}
+  room: {fileID: 629956911}
 --- !u!64 &1960930110
 MeshCollider:
   m_ObjectHideFlags: 0

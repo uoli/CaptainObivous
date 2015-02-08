@@ -4,6 +4,7 @@ using System.Collections;
 public class BinPuzzle : MonoBehaviour {
 	public AudioClip firstMessage;
 	public AudioClip secondMessage;
+	public Room room;
 	private int numberOfNotesInBin = 0;
 
 	void OnCollisionEnter(Collision col)
@@ -23,8 +24,6 @@ public class BinPuzzle : MonoBehaviour {
 		Debug.Log (numberOfNotesInBin);
 		if (numberOfNotesInBin >= 3)
 		{
-			Room room = gameObject.transform.root.gameObject.GetComponent<Room>();
-			Debug.Log(room);
 			if (room != null)
 			{
 				room.Unloop();
