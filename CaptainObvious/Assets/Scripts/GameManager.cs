@@ -20,11 +20,5 @@ public class GameManager : MonoBehaviour {
 		if (s_GameManager == null)
 			s_GameManager = this;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 
 }

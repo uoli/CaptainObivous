@@ -50,6 +50,14 @@ public class Cursor : MonoBehaviour {
 				return;
 			}
 
+
+			if (overInteractable && selectedInteractable.GetComponent<Phone>() != null)
+			{
+				var phone = selectedInteractable.GetComponent<Phone>();
+				phone.Interact(player);
+				return;
+			}
+
 			//throw object
 			if (holdsObject)
 			{
@@ -63,7 +71,7 @@ public class Cursor : MonoBehaviour {
 			//handle door
 			if (overInteractable && selectedInteractable.GetComponent<DoorAnimation>() != null)
 			{
-				selectedInteractable.GetComponent<DoorAnimation>().enabled = true;
+				selectedInteractable.GetComponent<DoorAnimation>().Open();
 				return;
 			}
 

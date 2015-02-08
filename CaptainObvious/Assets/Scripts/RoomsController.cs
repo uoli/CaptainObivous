@@ -169,8 +169,11 @@ public class RoomsController : MonoBehaviour
 			Connector connectorTo = connector.m_Room.GetConnector(connector.m_ConnectorIndex);
 			Vector3 d = m_Player.transform.position - connector.transform.position;
 			m_Player.transform.position = connectorTo.transform.position + d;
-
-			room.ResetDoorWithConnector(connector);
+			room.CloseDoorWithConnector(connector, false);
+		}
+		else
+		{
+			room.CloseDoorWithConnector(connector, true);
 		}
 
 		m_CurrentRoom = connector.m_Room;

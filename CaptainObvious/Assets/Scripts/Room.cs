@@ -32,10 +32,10 @@ public class Room : MonoBehaviour
 //		}
 	}
 
-	public void ResetDoorWithConnector(Connector connector)
+	public void CloseDoorWithConnector(Connector connector, bool seal)
 	{
 		DoorAnimation doorAnim = connector.transform.parent.GetComponentInChildren<DoorAnimation>();
 		if (doorAnim != null)
-		doorAnim.Reset();
+			doorAnim.Close(seal);
 	}
 }
