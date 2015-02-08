@@ -226,12 +226,27 @@ public class RoomsController : MonoBehaviour
 			return;
 		}*/
 	}
-
+	
 	public void OnRoomExit(Room room, Connector connector)
 	{
 		Debug.Log ("Transition: " + room.name + " -> " + connector.m_Room.name);
-
+		
 		if (m_CurrentRoom.name.StartsWith(connector.m_RoomName))
+		{
+		}
+		else
+		{
+			m_CurrentRoom.SetRoomActive(false);
+			m_CurrentRoom = connector.m_Room;
+			m_CurrentRoom.SetRoomActive(true);
+			//room.CloseDoorWithConnector(connector, true);
+		}
+	}
+	
+	public void OnRoomExitZoneExit(Room room, Connector connector)
+	{
+		Debug.Log ("Exit from door's zone: " + room.name);
+		if (m_CurrentRoom.name == room.name)
 		{
 			// Looping
 			Connector connectorTo = m_CurrentRoom.GetConnector(connector.m_ConnectorIndex);
@@ -242,9 +257,6 @@ public class RoomsController : MonoBehaviour
 		}
 		else
 		{
-			m_CurrentRoom.SetRoomActive(false);
-			m_CurrentRoom = connector.m_Room;
-			m_CurrentRoom.SetRoomActive(true);
 			room.CloseDoorWithConnector(connector, true);
 		}
 	}
