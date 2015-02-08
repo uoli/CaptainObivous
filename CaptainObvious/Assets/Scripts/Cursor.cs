@@ -89,6 +89,9 @@ public class Cursor : MonoBehaviour {
 				return;
 			}
 
+			if (selectedInteractable.gameObject.name == "PhoneButtonTrigger" || selectedInteractable.gameObject.name == "PowerSocket" || selectedInteractable.gameObject.name == "AnsweringMashine")
+				return;
+
 			//pick object
 			if (overInteractable)
 			{
