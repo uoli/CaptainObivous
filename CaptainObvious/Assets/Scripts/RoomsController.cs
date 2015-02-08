@@ -134,6 +134,7 @@ public class RoomsController : MonoBehaviour
 		var firstRoomTransform = m_CurrentRoom.transform;
 		var playerAnchorTransform = firstRoomTransform.Find("Anchors/Player");
 		m_Player.transform.position = playerAnchorTransform.position;
+		m_Player.transform.rotation = playerAnchorTransform.rotation;
 		// Activate player
 		m_CurrentRoom.SetRoomActive(true);
 		m_Player.SetActive(true);
