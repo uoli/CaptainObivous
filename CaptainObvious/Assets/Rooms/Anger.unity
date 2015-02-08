@@ -422,6 +422,7 @@ GameObject:
   - 33: {fileID: 61365030}
   - 23: {fileID: 61365029}
   - 95: {fileID: 61365028}
+  - 64: {fileID: 61365031}
   m_Layer: 0
   m_Name: Wall_Corner2_right
   m_TagString: Untagged
@@ -485,6 +486,20 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 1842414233}
   m_GameObject: {fileID: 61365026}
+  m_Mesh: {fileID: 4300000, guid: faaa803d75285f34a8b3116a81790bd2, type: 3}
+--- !u!64 &61365031
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6420404, guid: 5beebe7bdbb79834a96508dcdde17f40,
+    type: 2}
+  m_PrefabInternal: {fileID: 1842414233}
+  m_GameObject: {fileID: 61365026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300000, guid: faaa803d75285f34a8b3116a81790bd2, type: 3}
 --- !u!1 &62443908
 GameObject:
@@ -626,6 +641,7 @@ GameObject:
   - 4: {fileID: 75638113}
   - 33: {fileID: 75638115}
   - 23: {fileID: 75638114}
+  - 136: {fileID: 75638116}
   m_Layer: 0
   m_Name: PunchBagMesh
   m_TagString: Interactable
@@ -674,6 +690,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1982896205}
   m_GameObject: {fileID: 75638112}
   m_Mesh: {fileID: 4300002, guid: d6c8f09c274302b44a377531006121d7, type: 3}
+--- !u!136 &75638116
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 75638112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: .187419802
+  m_Height: 1.40634012
+  m_Direction: 1
+  m_Center: {x: -.00243319571, y: -.696746707, z: -6.3188374e-05}
 --- !u!1 &84254230
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,8 +5041,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1013345782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.1960001, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 4.88000011, y: 0, z: -1.26999998}
+  m_LocalScale: {x: 1.20610929, y: 2, z: 1.16003001}
   m_Children: []
   m_Father: {fileID: 851479729}
   m_RootOrder: 9
@@ -5945,6 +5974,7 @@ GameObject:
   - 4: {fileID: 1278040317}
   - 65: {fileID: 1278040316}
   - 114: {fileID: 1278040315}
+  - 114: {fileID: 1278040318}
   m_Layer: 0
   m_Name: EnterTrigger
   m_TagString: Untagged
@@ -5991,6 +6021,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629956910}
   m_RootOrder: 0
+--- !u!114 &1278040318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11433974, guid: f3f9ab6dc8355204483dcc4daa11beaa,
+    type: 2}
+  m_PrefabInternal: {fileID: 1360719929}
+  m_GameObject: {fileID: 1278040314}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92295043aecde4749b3b600e769f3bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPSController: {fileID: 124506, guid: abda439e4da1a034f8b65518436d8ab0, type: 2}
 --- !u!1 &1310853174
 GameObject:
   m_ObjectHideFlags: 0
@@ -6349,6 +6392,7 @@ GameObject:
   - 33: {fileID: 1405681906}
   - 23: {fileID: 1405681905}
   - 54: {fileID: 1405681903}
+  - 135: {fileID: 1405681904}
   - 135: {fileID: 1405681902}
   m_Layer: 0
   m_Name: CrushedPaperNote
@@ -6397,6 +6441,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &1405681904
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13550658, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 394494186}
+  m_GameObject: {fileID: 1405681900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .116327301
+  m_Center: {x: 2.23517507e-08, y: 7.45058681e-09, z: -4.99600361e-16}
 --- !u!23 &1405681905
 Renderer:
   m_ObjectHideFlags: 0
@@ -7916,6 +7973,7 @@ GameObject:
   - 95: {fileID: 1960930106}
   - 114: {fileID: 1960930109}
   - 65: {fileID: 1960930105}
+  - 64: {fileID: 1960930111}
   - 64: {fileID: 1960930110}
   m_Layer: 0
   m_Name: Bin
@@ -7948,7 +8006,7 @@ BoxCollider:
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: .519999981, y: .670000017, z: .680000007}
-  m_Center: {x: 3.80727023e-08, y: 6.89397211e-07, z: .401482314}
+  m_Center: {x: 3.80727023e-08, y: -.0599999987, z: .0399999991}
 --- !u!95 &1960930106
 Animator:
   serializedVersion: 3
@@ -8007,12 +8065,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1784078477e39a140834976376b06534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfNotesRequired: 0
+  firstMessage: {fileID: 8300000, guid: 727d669c570bafd4a8392f26c777414c, type: 3}
+  secondMessage: {fileID: 8300000, guid: 9e7481eab1a3ea84880c1f357b56b0e8, type: 3}
 --- !u!64 &1960930110
 MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960930103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: f90fad93a6e8c684db0bbc9a075f1742, type: 3}
+--- !u!64 &1960930111
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6401770, guid: dd5e1ad22bba1d441bdb3cda75bedf14,
+    type: 2}
+  m_PrefabInternal: {fileID: 1500359463}
   m_GameObject: {fileID: 1960930103}
   m_Material: {fileID: 0}
   m_IsTrigger: 0

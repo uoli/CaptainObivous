@@ -71,6 +71,7 @@ public class RoomsController : MonoBehaviour
 		Vector3 p2 = connector2.transform.position;
 
 		Vector3 d2 = room2.transform.position - p2;
+		d2.y = room1.transform.position.y + 0.000001f;
 		room2.transform.position = p1 + d2;
 	}
 

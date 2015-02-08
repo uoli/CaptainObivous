@@ -23,10 +23,10 @@ public class DoorAnimation : MonoBehaviour
 		case State.Idle:
 			return;
 		case State.Opening:
-			m_Time += Time.deltaTime;
+			m_Time += Time.deltaTime * 2;
 			break;
 		case State.Closing:
-			m_Time -= Time.deltaTime * 2;
+			m_Time -= Time.deltaTime * 4;
 			break;
 		}
 
