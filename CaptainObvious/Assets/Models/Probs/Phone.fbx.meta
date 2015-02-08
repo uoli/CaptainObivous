@@ -8,25 +8,30 @@ ModelImporter:
     100004: Default
     100006: Circle
     100008: Cube
+    100010: BezierCurve.001
     400000: //RootNode
     400002: BezierCurve
     400004: Default
     400006: Circle
     400008: Cube
+    400010: BezierCurve.001
     2300000: //RootNode
     2300002: BezierCurve
     2300004: Default
     2300006: Circle
     2300008: Cube
+    2300010: BezierCurve.001
     3300000: //RootNode
     3300002: BezierCurve
     3300004: Default
     3300006: Circle
     3300008: Cube
+    3300010: BezierCurve.001
     4300000: Default
     4300002: BezierCurve
     4300004: Circle
     4300006: Cube
+    4300008: BezierCurve.001
     9500000: //RootNode
   materials:
     importMaterials: 1
