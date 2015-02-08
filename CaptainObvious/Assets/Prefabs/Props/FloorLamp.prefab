@@ -11,12 +11,13 @@ GameObject:
   - 33: {fileID: 3348322}
   - 23: {fileID: 2348322}
   - 95: {fileID: 9548322}
+  - 65: {fileID: 6501642}
   m_Layer: 0
   m_Name: FloorLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &448322
 Transform:
@@ -25,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148322}
   m_LocalRotation: {x: -4.3297803e-17, y: .707106769, z: .707106888, w: -4.32978096e-17}
-  m_LocalPosition: {x: 9.50699997, y: 0, z: -3.40400004}
-  m_LocalScale: {x: .314651012, y: .314651012, z: .314651012}
+  m_LocalPosition: {x: 2.7119, y: 0, z: -3.15770006}
+  m_LocalScale: {x: .394646853, y: .394646913, z: .394646913}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,6 +58,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148322}
   m_Mesh: {fileID: 4300000, guid: 300f2ece3e298134eb4f0a0570e0d2d1, type: 3}
+--- !u!65 &6501642
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148322}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.01233244, y: 2.01233387, z: 5.34329081}
+  m_Center: {x: .00616121572, y: .0259176809, z: 2.71555185}
 --- !u!95 &9548322
 Animator:
   serializedVersion: 3
