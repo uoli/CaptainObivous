@@ -4,10 +4,10 @@ using System.Collections;
 
 public class TitleManager : MonoBehaviour 
 {
-	public AudioClip introSoundBit;
 	public AudioSource audioSource;
 	public GameObject backGroundMusic;
 	public Button titleButton;
+	public Animator animator;
 
 	// Use this for initialization
 	void Start () {
@@ -22,28 +22,21 @@ public class TitleManager : MonoBehaviour
 	public void OnTitleClicked()
 	{
 		titleButton.interactable = false;
+		animator.SetTrigger("StartAnim");
 		
-		if (introSoundBit == null)
-		{
-			OnAudioFinished();
-			return;
-		}
 
-		audioSource.clip = introSoundBit;
-		audioSource.Play();
 		StartCoroutine(WaitForCallToFinish());
 	}
 
 	IEnumerator WaitForCallToFinish()
 	{
-		while(audioSource.isPlaying)
-		{
-			yield return new WaitForEndOfFrame();
-		}
-		OnAudioFinished();
+
+		yield return new WaitForSeconds(1.5f);
+
+		OnTitleFinished();
 	}
 
-	void OnAudioFinished ()
+	void OnTitleFinished ()
 	{
 		Application.LoadLevelAdditive("MainScene");
 	}
