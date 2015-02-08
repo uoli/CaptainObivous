@@ -30,7 +30,7 @@ public class DoorAnimation : MonoBehaviour
 			break;
 		}
 
-		float angle = Mathf.LerpAngle(0, -90, m_Time);
+		float angle = Mathf.LerpAngle(0, 90, m_Time);
 		transform.localEulerAngles = new Vector3(0, angle, 0);
 		if (m_Time >= 1.0f || m_Time <= 0.0)
 			m_State = State.Idle;
@@ -48,8 +48,11 @@ public class DoorAnimation : MonoBehaviour
 
 	public void Close(bool seal)
 	{
+		if (m_Sealed)
+			return;
+
 		enabled = true;
-		m_Time = 0.0f;
+		m_Time = 1.0f;
 		if (!m_Sealed && seal)
 			m_Sealed = true;
 		m_State = State.Closing;
