@@ -240,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camShaker: {fileID: 11419818}
+  rageMessage: {fileID: 8300000, guid: a77f4167b533c1c44b97dc700340a262, type: 3}
 --- !u!114 &11415242
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -4,11 +4,13 @@ using System.Collections;
 public class Player : MonoBehaviour
 {
 	public CameraShaker camShaker;
+	public AudioClip rageMessage;
 
 	float rageMeter = 0;
 	float rageIncreaseCoolDown = 0;
 	float maxRageCooldown = 2f;
 	float rageDecreaseStep = .5f;
+	bool playedRageMessage = false;
 
 	// Use this for initialization
 	void Start () {
@@ -43,6 +45,10 @@ public class Player : MonoBehaviour
 		rageMeter = Mathf.Min(rageMeter, 1f);
 		rageIncreaseCoolDown = maxRageCooldown;
 		camShaker.intensity = rageMeter;
-		
+		if (!playedRageMessage && rageMeter > 0.7f)
+		{
+			Camera.main.audio.clip = rageMessage;
+			Camera.main.audio.Play();
+		}
 	}
 }

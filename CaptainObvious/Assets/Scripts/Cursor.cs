@@ -28,7 +28,7 @@ public class Cursor : MonoBehaviour {
 			}
 		}
 
-		if (overInteractable && isNarrationHappening)
+		if (overInteractable && isNarrationHappening && !selectedInteractable.name.Equals("PunchBag"))
 		{
 			UnityEngine.Cursor.SetCursor(nonInteractCursor, Vector3.zero, CursorMode.Auto);
 		}
