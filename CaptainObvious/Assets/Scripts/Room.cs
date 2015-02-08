@@ -7,6 +7,7 @@ public class Room : MonoBehaviour
 {
 	public List<Connector> m_Connectors = new List<Connector>();
 	public bool m_Looping = false;
+	private MainNaration mainNarration;
 
 	public Connector GetConnector(int index)
 	{
@@ -14,13 +15,20 @@ public class Room : MonoBehaviour
 	}
 
 	// Use this for initialization
-	void Start () {
-	
+	void OnEnable () 
+	{
+		mainNarration = FindObjectOfType<MainNaration>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 	
+	}
+
+	public void OnEnterLoop ()
+	{
+		mainNarration.gameObject.SetActive(true);
 	}
 
 	public void SetRoomActive(bool active)

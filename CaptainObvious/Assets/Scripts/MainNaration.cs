@@ -9,9 +9,15 @@ public class MainNaration : MonoBehaviour {
 	{
 		if (loopCount < narationLines.Length)
 		{
-			Camera.main.audio.PlayOneShot(narationLines[loopCount]);
+			Camera.main.audio.clip = narationLines[loopCount];
+			Camera.main.audio.Play();
 			loopCount++;
 			gameObject.SetActive(false);
 		}
+	}
+
+	void SkipCurrentNarration()
+	{
+		Camera.main.audio.Stop();
 	}
 }

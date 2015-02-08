@@ -5,6 +5,7 @@ public class Cursor : MonoBehaviour {
 	public Player player;
 	public Texture2D normalCursor;
 	public Texture2D interactCursor;
+	public Texture2D nonInteractCursor;
 	private float distOfObjectInFrontOfPlayer = 2f;
 	private float throwForce = 100f;
 	private float punchForce = 1f;
@@ -16,23 +17,35 @@ public class Cursor : MonoBehaviour {
 	void Update () {
 		var ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit hit = new RaycastHit();
-		bool isOverInteractable = false;
-		if (Physics.Raycast (ray, out hit, 10)) {
+		bool isNarrationHappening = Camera.main.audio.isPlaying;
+		overInteractable = false;
+		if (Physics.Raycast (ray, out hit, 10)) 
+		{
 			if (hit.collider.gameObject.tag.Equals("Interactable"))
 			{
-				isOverInteractable = true;
-			    UnityEngine.Cursor.SetCursor(interactCursor, Vector3.zero, CursorMode.Auto);
 				overInteractable = true;
 				selectedInteractable = hit.collider.gameObject;
 			}
 		}
 
-		if (!isOverInteractable) 
+		if (overInteractable && isNarrationHappening)
+		{
+			UnityEngine.Cursor.SetCursor(nonInteractCursor, Vector3.zero, CursorMode.Auto);
+		}
+		else if(overInteractable)
+		{
+			UnityEngine.Cursor.SetCursor(interactCursor, Vector3.zero, CursorMode.Auto);
+		}
+		else
 		{
 			UnityEngine.Cursor.SetCursor(normalCursor, Vector3.zero, CursorMode.Auto);
-			overInteractable = false;
 		}
-		HandleMouseClick(ray, hit);
+
+		if (!isNarrationHappening)
+			HandleMouseClick(ray, hit);
+
+		if (Input.GetKeyUp(KeyCode.E))
+			SkipNarration();
 	}
 
 	void HandleMouseClick(Ray ray, RaycastHit hit) 
@@ -95,5 +108,10 @@ public class Cursor : MonoBehaviour {
 				Debug.Log("So, you're not such an Average Joe after all!");*/
 
 		}
+	}
+
+	void SkipNarration ()
+	{
+		Camera.main.audio.Stop();
 	}
 }
