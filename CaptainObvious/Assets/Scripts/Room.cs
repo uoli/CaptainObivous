@@ -8,6 +8,7 @@ public class Room : MonoBehaviour
 	public List<Connector> m_Connectors = new List<Connector>();
 	bool m_PrevLooping = false;
 	public bool m_Looping = false;
+	public bool m_IsFinal = false;
 	private MainNaration mainNarration;
 
 	class LoopingData

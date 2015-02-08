@@ -44,6 +44,11 @@ public class DoorAnimation : MonoBehaviour
 		enabled = true;
 		m_Time = 0.0f;
 		m_State = State.Opening;
+
+		if (transform.parent.parent.GetComponentInChildren<Connector>().m_Room.m_IsFinal)
+		{
+			Application.LoadLevel("EndScreen");
+		}
 	}
 
 	public void Close(bool seal)

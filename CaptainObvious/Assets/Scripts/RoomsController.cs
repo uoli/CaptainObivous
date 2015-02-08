@@ -18,8 +18,8 @@ public class RoomsController : MonoBehaviour
 	Dictionary<string, RoomsData> m_Rooms = new Dictionary<string, RoomsData>();
 
 
-	static string[] s_RoomNames = new string[]{"Denial", "Anger", "Bargaining", "Depression", "Acceptance"};
-	const int kLevelLoadUpdateCount = 5;
+	static string[] s_RoomNames = new string[]{"Denial", "Anger", "Bargaining", "Depression", "Acceptance", "Ending"};
+	const int kLevelLoadUpdateCount = 7;
 	int m_RoomsLoaded;
 
 	Room m_CurrentRoom;
@@ -258,6 +258,10 @@ public class RoomsController : MonoBehaviour
 		else
 		{
 			room.CloseDoorWithConnector(connector, true);
+			if (connector.m_Room.m_IsFinal)
+			{
+				Application.LoadLevel("EndScreen");
+			}
 		}
 	}
 }
