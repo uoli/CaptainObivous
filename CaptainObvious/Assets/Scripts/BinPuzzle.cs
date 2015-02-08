@@ -19,6 +19,11 @@ public class BinPuzzle : MonoBehaviour {
 		{
 			Camera.main.audio.clip = secondMessage;
 			Camera.main.audio.Play();
+			Room room = gameObject.transform.root.GetComponent<Room>();
+			if (room != null)
+			{
+				room.Unloop();
+			}
 		}
 	}
 }
