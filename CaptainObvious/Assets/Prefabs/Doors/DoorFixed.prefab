@@ -113,7 +113,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -.119000003, y: 0, z: 0}
   m_LocalScale: {x: 5, y: .100000001, z: .166666672}
   m_Children: []
   m_Father: {fileID: 489180}
@@ -150,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: 0}
+  m_LocalPosition: {x: -.647000015, y: 2.5, z: 0}
   m_LocalScale: {x: 1, y: 5, z: 2.35746527}
   m_Children: []
   m_Father: {fileID: 489180}
@@ -161,8 +161,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189180}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 4.13663059e-07}
-  m_LocalPosition: {x: 6.89499998, y: .00300000003, z: -.0170000009}
+  m_LocalRotation: {x: 0, y: 4.13663059e-07, z: 0, w: -1}
+  m_LocalPosition: {x: -1.61399996, y: .00200000009, z: -2.47199988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489174}
@@ -254,7 +254,7 @@ Renderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 0
-  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .679130554, w: .759208679}
+  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .821708679, w: .759208679}
   m_Materials:
   - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_SubsetIndices: 
@@ -368,8 +368,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Room2
-  m_ConnectorIndex: 0
+  m_RoomName: Denial
+  m_ConnectorIndex: 1
   m_Room: {fileID: 0}
 --- !u!114 &11489180
 MonoBehaviour:

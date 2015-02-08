@@ -124,7 +124,7 @@ public class RoomsController : MonoBehaviour
 		}
 
 		// Build level
-		m_CurrentRoom = GetRoomInstance("Room1");
+		m_CurrentRoom = GetRoomInstance(s_RoomNames[0]);
 		BuildRoomsChain(null, m_CurrentRoom);
 
 		//First room special treatment, or AKA hack.
