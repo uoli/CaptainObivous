@@ -4,7 +4,6 @@ using System.Collections;
 
 public class TitleManager : MonoBehaviour 
 {
-	public AudioSource audioSource;
 	public GameObject backGroundMusic;
 	public Button titleButton;
 	public Animator animator;

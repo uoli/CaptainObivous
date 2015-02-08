@@ -769,9 +769,8 @@ Transform:
   - {fileID: 101608490}
   - {fileID: 631700585}
   - {fileID: 393865288}
-  - {fileID: 1509878726}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!1 &1308340075
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,8 +917,8 @@ Transform:
   m_LocalPosition: {x: 1.75322652, y: .97680825, z: -.582915783}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1208092835}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &2053989718
 GameObject:
   m_ObjectHideFlags: 0
