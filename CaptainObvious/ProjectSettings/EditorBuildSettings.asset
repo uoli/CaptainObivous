@@ -19,7 +19,7 @@ EditorBuildSettings:
     path: Assets/Rooms/Depression.unity
   - enabled: 1
     path: Assets/Rooms/Acceptance.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Rooms/Ending.unity
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
