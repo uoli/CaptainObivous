@@ -18,7 +18,7 @@ public class RoomsController : MonoBehaviour
 	Dictionary<string, RoomsData> m_Rooms = new Dictionary<string, RoomsData>();
 
 
-	static string[] s_RoomNames = new string[]{"Denial", "Anger", "Bargaining", "Depression"};
+	static string[] s_RoomNames = new string[]{"Denial", "Anger", "Bargaining", "Depression", "Acceptance"};
 	const int kLevelLoadUpdateCount = 5;
 	int m_RoomsLoaded;
 
@@ -35,12 +35,17 @@ public class RoomsController : MonoBehaviour
 	{
 	}
 
-	void LoadRooms()
+	IEnumerator LoadRooms()
 	{
 		foreach(var roomName in s_RoomNames)
 		{
-			Application.LoadLevelAdditiveAsync (roomName);
+			var async = Application.LoadLevelAdditiveAsync (roomName);
+			yield return async;
+			m_RoomsLoaded++;
 		}
+
+		SetupRooms();
+		
 	}
 
 	Room GetRoomInstance(string roomName)
@@ -104,6 +109,7 @@ public class RoomsController : MonoBehaviour
 
 	void SetupRooms()
 	{
+
 		// Attach rooms to the root
 		foreach(var roomName in s_RoomNames)
 		{
@@ -151,20 +157,20 @@ public class RoomsController : MonoBehaviour
 
 		// TODO: Move to loading screen
 		// Load initial level layout
-		LoadRooms();
+		StartCoroutine(LoadRooms());
 	}
 	
 	// Update is called once per frame
 	void Update()
 	{
-		if (m_RoomsLoaded <= kLevelLoadUpdateCount)
+		/*if (m_RoomsLoaded <= kLevelLoadUpdateCount)
 		{
 			if (m_RoomsLoaded == kLevelLoadUpdateCount)
 				SetupRooms();
 
-			m_RoomsLoaded++;
+			//m_RoomsLoaded++;
 			return;
-		}
+		}*/
 	}
 
 	public void OnRoomExit(Room room, Connector connector)
