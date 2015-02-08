@@ -372,7 +372,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &79994740
 AudioSource:
@@ -894,6 +894,46 @@ Prefab:
       propertyPath: m_TagString
       value: Interactable
       objectReference: {fileID: 0}
+    - target: {fileID: 6550328, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550326, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550324, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550322, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550320, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550318, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550316, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550314, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550312, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6550310, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_Size.y
+      value: .600000024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
   m_RootGameObject: {fileID: 383828493}
@@ -1239,7 +1279,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &141532553
 AudioSource:
@@ -1355,7 +1395,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &171698374
 AudioSource:
@@ -2030,7 +2070,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &253771160
 AudioSource:
@@ -2754,7 +2794,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &408572814
 AudioSource:
@@ -3354,7 +3394,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &610703488
 AudioSource:
@@ -3753,7 +3793,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &715447805
 AudioSource:
@@ -6211,7 +6251,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1167267452
 AudioSource:
@@ -7291,7 +7331,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &1496938826
 AudioSource:
@@ -9966,7 +10006,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1, y: .600000024, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &2057363545
 AudioSource:
