@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Bargaining
+  m_RoomName: Barganing
   m_ConnectorIndex: 0
   m_Room: {fileID: 0}
 --- !u!23 &112616487
@@ -781,7 +781,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11489178, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_RoomName
-      value: Bargaining
+      value: Barganing
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
@@ -2006,7 +2006,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 939567996}
   m_Layer: 0
-  m_Name: DoorContinue
+  m_Name: DoorFixed
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2549,7 +2549,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bd1bb464185d546a9e78e6c7c18557, type: 2}
+  - {fileID: 2100000, guid: 2821f0f58b8e4814d85fbb6b5f1da331, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -2941,7 +2941,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bd1bb464185d546a9e78e6c7c18557, type: 2}
+  - {fileID: 2100000, guid: 2821f0f58b8e4814d85fbb6b5f1da331, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -4031,10 +4031,6 @@ Prefab:
     - target: {fileID: 2389182, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_LightmapTilingOffset.w
       value: .770927429
-      objectReference: {fileID: 0}
-    - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
-      propertyPath: m_Name
-      value: DoorContinue
       objectReference: {fileID: 0}
     - target: {fileID: 11489178, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_RoomName

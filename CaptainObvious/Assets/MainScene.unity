@@ -120,7 +120,7 @@ Prefab:
     - target: {fileID: 11415242, guid: abda439e4da1a034f8b65518436d8ab0, type: 2}
       propertyPath: nonInteractCursor
       value: 
-      objectReference: {fileID: 2800000, guid: f5ec9e8a31571c94dac34a0f9f78f7e2, type: 3}
+      objectReference: {fileID: 2800000, guid: 3691ef757ac9352488e8692730c75513, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: abda439e4da1a034f8b65518436d8ab0, type: 2}
   m_RootGameObject: {fileID: 800083846}
@@ -216,7 +216,7 @@ MonoBehaviour:
   player: {fileID: 800083853}
   normalCursor: {fileID: 2800000, guid: ac159b6986fa3c44a8bfa31ff1b59594, type: 3}
   interactCursor: {fileID: 2800000, guid: 48b171bd512713f4b8d217680f5764f3, type: 3}
-  nonInteractCursor: {fileID: 2800000, guid: f5ec9e8a31571c94dac34a0f9f78f7e2, type: 3}
+  nonInteractCursor: {fileID: 2800000, guid: 3691ef757ac9352488e8692730c75513, type: 3}
 --- !u!114 &800083849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camShaker: {fileID: 1162268341}
+  rageMessage: {fileID: 8300000, guid: a77f4167b533c1c44b97dc700340a262, type: 3}
 --- !u!1 &994766914
 GameObject:
   m_ObjectHideFlags: 0
