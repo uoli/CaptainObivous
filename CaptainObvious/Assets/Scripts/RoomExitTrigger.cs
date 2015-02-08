@@ -19,4 +19,9 @@ public class RoomExitTrigger : MonoBehaviour
 
 		RoomsController.GetInstance().OnRoomExit(m_Room, m_Connector);	
 	}
+
+	void OnTriggerExit (Collider collider)
+	{
+
+	}
 }
