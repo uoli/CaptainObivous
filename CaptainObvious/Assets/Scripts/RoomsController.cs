@@ -54,7 +54,13 @@ public class RoomsController : MonoBehaviour
 		if (!m_Rooms.TryGetValue(roomName, out rd))
 			return null;
 
-		// TODO: reuse rooms here
+		// Reuse rooms
+		foreach (var instantiatedRoom in rd.instantiatedRooms)
+		{
+			if (!instantiatedRoom.gameObject.activeSelf)
+				return instantiatedRoom;
+		}
+
 		GameObject roomGO = (GameObject)GameObject.Instantiate(rd.roomTemplate.gameObject);
 		Room room = roomGO.GetComponent<Room>(); 
 		rd.instantiatedRooms.Add(room);
@@ -75,14 +81,14 @@ public class RoomsController : MonoBehaviour
 		room2.transform.position = p1 + d2;
 	}
 
-	void BuildRoomsChain(string prevRoomName, Room room)
+	void BuildRoomsChain(Room prevRoom, Room room)
 	{
 		string roomName = room.gameObject.name;
 		room.gameObject.SetActive(true);
 		room.SetRoomActive(false);
 		foreach(var connector in room.m_Connectors)
 		{
-			if (prevRoomName != null && prevRoomName.StartsWith(connector.m_RoomName))
+			if (prevRoom != null && prevRoom.name.StartsWith(connector.m_RoomName))
 				continue;
 
 			Room r = GetRoomInstance(connector.m_RoomName);
@@ -91,21 +97,56 @@ public class RoomsController : MonoBehaviour
 
 			Connector c = r.GetConnector(connector.m_ConnectorIndex);
 			LinkRooms(room, connector, r, c);
+			connector.m_Room = r;
+			c.m_Room = room;
 
 			if (roomName.StartsWith(connector.m_RoomName))
 			{
 				// Looping
-				connector.m_Room = room;
-				c.m_Room = room;
 				r.gameObject.SetActive(true);
 			}
 			else
 			{
-				connector.m_Room = r;
-				c.m_Room = room;
-				BuildRoomsChain(roomName, r);
+				BuildRoomsChain(room, r);
 			}
 		}
+	}
+
+	void DropRoomsChain(Room prevRoom, Room room)
+	{
+		room.SetRoomActive(false);
+		room.gameObject.SetActive(false);
+		foreach(var connector in room.m_Connectors)
+		{
+			Room r = connector.m_Room;
+			if (r == null || r == prevRoom)
+				continue;
+
+			DropRoomsChain(room, r);
+		}
+	}
+
+	public void RebuildRoomsChain(Room room, Connector connector, string newRoomName, int newRoomConnector)
+	{
+		// Drop old rooms
+		DropRoomsChain(room, connector.m_Room);
+		// Build new chain
+		Room newRoom = GetRoomInstance(newRoomName);
+
+		// Align new room
+		Vector3 p1 = connector.transform.position;
+		Vector3 p2 = newRoom.GetConnector(newRoomConnector).transform.position;
+		
+		Vector3 d2 = newRoom.transform.position - p2;
+		d2.y = room.transform.position.y + 0.000001f;
+		newRoom.transform.position = p1 + d2;
+
+		BuildRoomsChain(room, newRoom);
+
+		// Connect to the new room
+		connector.m_RoomName = newRoomName;
+		connector.m_ConnectorIndex = newRoomConnector;
+		connector.m_Room = newRoom;
 	}
 
 	void SetupRooms()
@@ -185,16 +226,30 @@ public class RoomsController : MonoBehaviour
 			return;
 		}*/
 	}
-
+	
 	public void OnRoomExit(Room room, Connector connector)
 	{
 		Debug.Log ("Transition: " + room.name + " -> " + connector.m_Room.name);
-
-		m_CurrentRoom.SetRoomActive(false);
-		if (m_CurrentRoom == connector.m_Room)
+		
+		if (m_CurrentRoom.name.StartsWith(connector.m_RoomName))
+		{
+		}
+		else
+		{
+			m_CurrentRoom.SetRoomActive(false);
+			m_CurrentRoom = connector.m_Room;
+			m_CurrentRoom.SetRoomActive(true);
+			//room.CloseDoorWithConnector(connector, true);
+		}
+	}
+	
+	public void OnRoomExitZoneExit(Room room, Connector connector)
+	{
+		Debug.Log ("Exit from door's zone: " + room.name);
+		if (m_CurrentRoom.name == room.name)
 		{
 			// Looping
-			Connector connectorTo = connector.m_Room.GetConnector(connector.m_ConnectorIndex);
+			Connector connectorTo = m_CurrentRoom.GetConnector(connector.m_ConnectorIndex);
 			Vector3 d = m_Player.transform.position - connector.transform.position;
 			m_Player.transform.position = connectorTo.transform.position + d;
 			room.OnEnterLoop();
@@ -204,8 +259,5 @@ public class RoomsController : MonoBehaviour
 		{
 			room.CloseDoorWithConnector(connector, true);
 		}
-
-		m_CurrentRoom = connector.m_Room;
-		m_CurrentRoom.SetRoomActive(true);
 	}
 }
