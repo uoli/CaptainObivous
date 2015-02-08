@@ -502,6 +502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 8
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &87804887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1147,6 +1149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 5
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &178633810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1425,6 +1429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 4
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &214759179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1628,7 +1634,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 0
-  m_Color: {r: .926470578, g: .887382209, b: .572231829, a: 1}
+  m_Color: {r: .500432551, g: .644415975, b: .764705896, a: 1}
   m_Intensity: .600000024
   m_Range: 22
   m_SpotAngle: 79
@@ -1937,6 +1943,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 2
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &265797931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2646,6 +2654,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 1
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &489779803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3954,6 +3964,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 0
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &886346474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5467,6 +5479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 9
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &1183802425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6240,6 +6254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 6
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &1448904627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6738,7 +6754,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: .998174429, g: 1, b: .867647052, a: 1}
+  m_Color: {r: .87221092, g: .867647052, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 5
   m_SpotAngle: 30
@@ -7156,6 +7172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 3
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &1587895008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7280,7 +7298,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1613126844}
   m_LocalRotation: {x: .5, y: .5, z: -.5, w: .5}
-  m_LocalPosition: {x: -.0829999968, y: 2.52800012, z: -3.77699995}
+  m_LocalPosition: {x: -.0799999982, y: 2.52999997, z: -5.3499999}
   m_LocalScale: {x: .4084481, y: .408448189, z: .408448189}
   m_Children: []
   m_Father: {fileID: 851479729}
@@ -8426,6 +8444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 7
+  goodSound: {fileID: 0}
+  badSound: {fileID: 0}
 --- !u!65 &1899760159
 BoxCollider:
   m_ObjectHideFlags: 0
