@@ -10,7 +10,7 @@ public class BinPuzzle : MonoBehaviour {
 	{
 		if (col.other.gameObject.name.Equals("CrushedPaperNote"))
 			numberOfNotesInBin++;
-		if (numberOfNotesInBin == 1)
+		if (numberOfNotesInBin == 1 && firstMessage != null)
 		{
 			Camera.main.audio.clip = firstMessage;
 			Camera.main.audio.Play();
@@ -19,7 +19,12 @@ public class BinPuzzle : MonoBehaviour {
 		{
 			Camera.main.audio.clip = secondMessage;
 			Camera.main.audio.Play();
-			Room room = gameObject.transform.root.GetComponent<Room>();
+		}
+		Debug.Log (numberOfNotesInBin);
+		if (numberOfNotesInBin >= 3)
+		{
+			Room room = gameObject.transform.root.gameObject.GetComponent<Room>();
+			Debug.Log(room);
 			if (room != null)
 			{
 				room.Unloop();
