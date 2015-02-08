@@ -230,8 +230,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 2
-  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .295341492, w: .430107117}
+  m_LightmapIndex: 0
+  m_LightmapTilingOffset: {x: .142578125, y: .142578125, z: .509208679, w: .721122742}
   m_Materials:
   - {fileID: 2100000, guid: 24df26adf06d5e54f82240d05b0ba0dd, type: 2}
   m_SubsetIndices: 
@@ -388,7 +388,7 @@ BoxCollider:
   m_GameObject: {fileID: 62443908}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3446,7 +3446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1074123890
 Transform:
   m_ObjectHideFlags: 0
@@ -3468,7 +3468,7 @@ BoxCollider:
   m_GameObject: {fileID: 1074123889}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -3528,7 +3528,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bd1bb464185d546a9e78e6c7c18557, type: 2}
+  - {fileID: 2100000, guid: 2821f0f58b8e4814d85fbb6b5f1da331, type: 2}
   - {fileID: 2100000, guid: 86c9fb5003aa3a54d8a297defaf756c5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -3987,7 +3987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1235591245
 Transform:
   m_ObjectHideFlags: 0
@@ -4439,8 +4439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f6ffddb064ce014d8b5aee854de6c52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RoomName: Denial
-  m_ConnectorIndex: 1
+  m_RoomName: Anger
+  m_ConnectorIndex: 0
   m_Room: {fileID: 0}
 --- !u!1001 &1463389084
 Prefab:
@@ -4665,7 +4665,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: c2bd1bb464185d546a9e78e6c7c18557, type: 2}
+  - {fileID: 2100000, guid: 2821f0f58b8e4814d85fbb6b5f1da331, type: 2}
   - {fileID: 2100000, guid: 86c9fb5003aa3a54d8a297defaf756c5, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
@@ -4724,6 +4724,14 @@ Prefab:
     - target: {fileID: 189180, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
       propertyPath: m_Name
       value: DoorEntry
+      objectReference: {fileID: 0}
+    - target: {fileID: 189174, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 189178, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a6add94168abc8e4abce9baf698022cf, type: 2}
