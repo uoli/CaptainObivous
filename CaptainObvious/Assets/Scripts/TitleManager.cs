@@ -45,6 +45,6 @@ public class TitleManager : MonoBehaviour
 
 	void OnAudioFinished ()
 	{
-		Application.LoadLevel("MainScene");
+		Application.LoadLevelAdditive("MainScene");
 	}
 }

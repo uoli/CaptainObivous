@@ -578,12 +578,13 @@ GameObject:
   - 33: {fileID: 93591006}
   - 23: {fileID: 93591005}
   - 95: {fileID: 93591004}
+  - 65: {fileID: 93591008}
   m_Layer: 0
   m_Name: bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!95 &93591004
 Animator:
@@ -611,8 +612,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 2
+  m_LightmapTilingOffset: {x: .296875, y: .296875, z: -.00115966797, w: -.00115966797}
   m_Materials:
   - {fileID: 2100000, guid: 64067d7f91a604c47acda5e24db0a039, type: 2}
   m_SubsetIndices: 
@@ -642,6 +643,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629956910}
   m_RootOrder: 9
+--- !u!65 &93591008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6582596, guid: 6b943451ddf064f45872aab0e183d0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 673836660}
+  m_GameObject: {fileID: 93591003}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.98863113, y: .742181599, z: 3.17819858}
+  m_Center: {x: -.00491392892, y: -.0234911349, z: 1.60466933}
 --- !u!1 &97024895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,12 +1875,13 @@ GameObject:
   - 33: {fileID: 279110212}
   - 23: {fileID: 279110211}
   - 95: {fileID: 279110210}
+  - 65: {fileID: 279110213}
   m_Layer: 0
   m_Name: FloorLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &279110209
 Transform:
@@ -1925,6 +1940,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 176463079}
   m_GameObject: {fileID: 279110208}
   m_Mesh: {fileID: 4300000, guid: 300f2ece3e298134eb4f0a0570e0d2d1, type: 3}
+--- !u!65 &279110213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6501642, guid: 000eae48ddd3a2a4ea206893c591088a,
+    type: 2}
+  m_PrefabInternal: {fileID: 176463079}
+  m_GameObject: {fileID: 279110208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.01233244, y: 2.01233387, z: 5.34329081}
+  m_Center: {x: .00616121572, y: .0259176809, z: 2.71555185}
 --- !u!1 &290303923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3782,12 +3810,13 @@ GameObject:
   - 33: {fileID: 711625338}
   - 23: {fileID: 711625337}
   - 95: {fileID: 711625336}
+  - 65: {fileID: 711625340}
   m_Layer: 0
   m_Name: FloorLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!95 &711625336
 Animator:
@@ -3846,6 +3875,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629956910}
   m_RootOrder: 6
+--- !u!65 &711625340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6501642, guid: 000eae48ddd3a2a4ea206893c591088a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1103507177}
+  m_GameObject: {fileID: 711625335}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.01233244, y: 2.01233387, z: 5.34329081}
+  m_Center: {x: .00616121572, y: .0259176809, z: 2.71555185}
 --- !u!1 &784417855
 GameObject:
   m_ObjectHideFlags: 0
@@ -4371,12 +4413,13 @@ GameObject:
   - 33: {fileID: 893191156}
   - 23: {fileID: 893191155}
   - 95: {fileID: 893191154}
+  - 65: {fileID: 893191158}
   m_Layer: 0
   m_Name: bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!95 &893191154
 Animator:
@@ -4404,8 +4447,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 2
+  m_LightmapTilingOffset: {x: .296875, y: .296875, z: -.00115966797, w: -.00115966797}
   m_Materials:
   - {fileID: 2100000, guid: 64067d7f91a604c47acda5e24db0a039, type: 2}
   m_SubsetIndices: 
@@ -4435,6 +4478,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629956910}
   m_RootOrder: 25
+--- !u!65 &893191158
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6582596, guid: 6b943451ddf064f45872aab0e183d0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1840875917}
+  m_GameObject: {fileID: 893191153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.98863113, y: .742181599, z: 3.17819858}
+  m_Center: {x: -.00491392892, y: -.0234911349, z: 1.60466933}
 --- !u!1001 &929266341
 Prefab:
   m_ObjectHideFlags: 0
@@ -4525,12 +4581,13 @@ GameObject:
   - 33: {fileID: 975492379}
   - 23: {fileID: 975492378}
   - 95: {fileID: 975492377}
+  - 65: {fileID: 975492380}
   m_Layer: 0
   m_Name: bookcase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &975492376
 Transform:
@@ -4570,8 +4627,8 @@ Renderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapIndex: 2
+  m_LightmapTilingOffset: {x: .296875, y: .296875, z: -.00115966797, w: -.00115966797}
   m_Materials:
   - {fileID: 2100000, guid: 64067d7f91a604c47acda5e24db0a039, type: 2}
   m_SubsetIndices: 
@@ -4589,6 +4646,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 162973489}
   m_GameObject: {fileID: 975492375}
   m_Mesh: {fileID: 4300000, guid: 5bd4d91f3299d3f4b975e369df34f780, type: 3}
+--- !u!65 &975492380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6582596, guid: 6b943451ddf064f45872aab0e183d0be,
+    type: 2}
+  m_PrefabInternal: {fileID: 162973489}
+  m_GameObject: {fileID: 975492375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.98863113, y: .742181599, z: 3.17819858}
+  m_Center: {x: -.00491392892, y: -.0234911349, z: 1.60466933}
 --- !u!1001 &981311868
 Prefab:
   m_ObjectHideFlags: 0
@@ -6783,7 +6853,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616663480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1946361365}
@@ -8561,8 +8631,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946361364}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
-  m_LocalPosition: {x: 5.23999977, y: 3.6400001, z: -2.88000011}
+  m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
+  m_LocalPosition: {x: 4.96199989, y: 1, z: -2.88000011}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1616663481}
