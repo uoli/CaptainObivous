@@ -105,15 +105,15 @@ Camera:
   m_GameObject: {fileID: 124504}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: .19166474, g: .301966369, b: .474509805, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: .100000001
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -253,8 +253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 11408764}
-  normalCursor: {fileID: 2800000, guid: 32dc4da607146d24498027a312233945, type: 3}
-  interactCursor: {fileID: 2800000, guid: db0ff0bbb4a0bf34c95139e7de35bee0, type: 3}
+  normalCursor: {fileID: 2800000, guid: ac159b6986fa3c44a8bfa31ff1b59594, type: 3}
+  interactCursor: {fileID: 2800000, guid: 48b171bd512713f4b8d217680f5764f3, type: 3}
   nonInteractCursor: {fileID: 2800000, guid: 3691ef757ac9352488e8692730c75513, type: 3}
 --- !u!114 &11419818
 MonoBehaviour:
@@ -369,7 +369,7 @@ CharacterController:
   m_GameObject: {fileID: 124506}
   serializedVersion: 2
   m_Height: 2
-  m_Radius: .400000006
+  m_Radius: .5
   m_SlopeLimit: 45
   m_StepOffset: .400000006
   m_SkinWidth: .0500000007

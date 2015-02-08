@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 492398}
   - 65: {fileID: 6592398}
   - 114: {fileID: 11492398}
+  - 114: {fileID: 11433974}
   m_Layer: 0
   m_Name: EnterTrigger
   m_TagString: Untagged
@@ -41,6 +42,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11433974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192398}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92295043aecde4749b3b600e769f3bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPSController: {fileID: 124506, guid: abda439e4da1a034f8b65518436d8ab0, type: 2}
 --- !u!114 &11492398
 MonoBehaviour:
   m_ObjectHideFlags: 1

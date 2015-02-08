@@ -6,7 +6,7 @@ public class Cursor : MonoBehaviour {
 	public Texture2D normalCursor;
 	public Texture2D interactCursor;
 	public Texture2D nonInteractCursor;
-	private float distOfObjectInFrontOfPlayer = 1f;
+	private float distOfObjectInFrontOfPlayer = 2f;
 	private float throwForce = 100f;
 	private float punchForce = 2f;
 	private bool overInteractable = false;
@@ -76,6 +76,7 @@ public class Cursor : MonoBehaviour {
 			{
 				selectedInteractable.transform.parent = null;
 				selectedInteractable.rigidbody.isKinematic = false;
+				selectedInteractable.rigidbody.useGravity = true;
 				selectedInteractable.rigidbody.AddForce(transform.forward * throwForce);
 				holdsObject = false;
 				return;
@@ -92,8 +93,9 @@ public class Cursor : MonoBehaviour {
 			if (overInteractable)
 			{
 				selectedInteractable.rigidbody.isKinematic = true;
+				selectedInteractable.rigidbody.useGravity = false;
 				selectedInteractable.transform.parent = Camera.main.transform;
-				selectedInteractable.transform.position = transform.position + transform.forward * distOfObjectInFrontOfPlayer;
+				selectedInteractable.transform.position = Camera.main.transform.position + Camera.main.transform.forward * distOfObjectInFrontOfPlayer;
 				holdsObject = true;
 				return;
 			}

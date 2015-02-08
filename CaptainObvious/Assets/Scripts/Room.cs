@@ -31,6 +31,16 @@ public class Room : MonoBehaviour
 		mainNarration.gameObject.SetActive(true);
 	}
 
+	private void ResetPhone()
+	{
+		var phone = GameObject.Find("Phone");
+		if (phone != null)
+		{
+			var phoneComponent = phone.GetComponent<PhoneNew>();
+			phoneComponent.ResetDialedNumber();
+		}
+	}
+
 	public void SetRoomActive(bool active)
 	{
 //		RoomExitTrigger[] triggers = transform.GetComponentsInChildren<RoomExitTrigger>();
