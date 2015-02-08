@@ -38,4 +38,12 @@ public class Room : MonoBehaviour
 		if (doorAnim != null)
 			doorAnim.Close(seal);
 	}
+
+	public void EnableEntryDoorHack ()
+	{
+		var connector = GetConnector(1);
+		var doorParent = connector.transform.parent;
+		doorParent.GetChild(0).gameObject.SetActive(true);
+		CloseDoorWithConnector(connector, true);
+	}
 }

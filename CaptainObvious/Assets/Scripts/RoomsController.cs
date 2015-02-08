@@ -45,7 +45,9 @@ public class RoomsController : MonoBehaviour
 
 	Room GetRoomInstance(string roomName)
 	{
-		RoomsData rd = m_Rooms[roomName];
+		RoomsData rd;
+		if (!m_Rooms.TryGetValue(roomName, out rd))
+			return null;
 
 		// TODO: reuse rooms here
 		GameObject roomGO = (GameObject)GameObject.Instantiate(rd.roomTemplate.gameObject);
@@ -78,6 +80,9 @@ public class RoomsController : MonoBehaviour
 				continue;
 
 			Room r = GetRoomInstance(connector.m_RoomName);
+			if (r == null)
+				continue;
+
 			Connector c = r.GetConnector(connector.m_ConnectorIndex);
 			LinkRooms(room, connector, r, c);
 
@@ -121,6 +126,9 @@ public class RoomsController : MonoBehaviour
 		// Build level
 		m_CurrentRoom = GetRoomInstance("Room1");
 		BuildRoomsChain(null, m_CurrentRoom);
+
+		//First room special treatment, or AKA hack.
+		m_CurrentRoom.EnableEntryDoorHack();
 
 		// Move player to the first room's anchor
 		var firstRoomTransform = m_CurrentRoom.transform;
