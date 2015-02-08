@@ -10,7 +10,13 @@ public class BinPuzzle : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		if (col.other.gameObject.name.Equals("CrushedPaperNote"))
-			numberOfNotesInBin++;
+		{
+			if(!col.other.gameObject.GetComponent<CrushedPaperStatus>().collected)
+			{
+				col.other.gameObject.GetComponent<CrushedPaperStatus>().collected = true;
+				numberOfNotesInBin++;
+			}
+		}
 		if (numberOfNotesInBin == 1 && firstMessage != null)
 		{
 			Camera.main.audio.clip = firstMessage;
