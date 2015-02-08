@@ -41,11 +41,11 @@ public class RoomsController : MonoBehaviour
 		{
 			var async = Application.LoadLevelAdditiveAsync (roomName);
 			yield return async;
+
 			m_RoomsLoaded++;
 		}
 
 		SetupRooms();
-		
 	}
 
 	Room GetRoomInstance(string roomName)
@@ -109,7 +109,6 @@ public class RoomsController : MonoBehaviour
 
 	void SetupRooms()
 	{
-
 		// Attach rooms to the root
 		foreach(var roomName in s_RoomNames)
 		{
@@ -144,6 +143,12 @@ public class RoomsController : MonoBehaviour
 		// Activate player
 		m_CurrentRoom.SetRoomActive(true);
 		m_Player.SetActive(true);
+
+		m_RoomsLoaded = s_RoomNames.Length + 1;
+		// Delete title
+		GameObject title = GameObject.Find("Title");
+		if (title != null)
+			Object.Destroy(title);
 	}
 
 	// Use this for initialization
@@ -163,6 +168,13 @@ public class RoomsController : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (m_RoomsLoaded < s_RoomNames.Length)
+		{
+			// Disable player
+			Player p = GameObject.FindObjectOfType<Player>();
+			if (p != null)
+				p.gameObject.SetActive(false);
+		}
 		/*if (m_RoomsLoaded <= kLevelLoadUpdateCount)
 		{
 			if (m_RoomsLoaded == kLevelLoadUpdateCount)
