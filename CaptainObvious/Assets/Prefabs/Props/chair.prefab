@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3319098}
   - 23: {fileID: 2319098}
   - 95: {fileID: 9519098}
+  - 65: {fileID: 6593826}
   m_Layer: 0
   m_Name: chair
   m_TagString: Untagged
@@ -24,8 +25,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119098}
-  m_LocalRotation: {x: .212155327, y: .674529493, z: .674529612, w: -.212155327}
-  m_LocalPosition: {x: 6.03000021, y: 0, z: 2.80200005}
+  m_LocalRotation: {x: -.295418084, y: .642439187, z: .642439246, w: .295418173}
+  m_LocalPosition: {x: .296999991, y: 0, z: .416999996}
   m_LocalScale: {x: .730000019, y: .730000019, z: .730000019}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,6 +58,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119098}
   m_Mesh: {fileID: 4300000, guid: cff3c920d9a08184c975f3d7528f74e5, type: 3}
+--- !u!65 &6593826
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 119098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.11911416, y: 1.78112614, z: 1.72946131}
+  m_Center: {x: 3.85087766e-08, y: -.376433134, z: .879523635}
 --- !u!95 &9519098
 Animator:
   serializedVersion: 3
