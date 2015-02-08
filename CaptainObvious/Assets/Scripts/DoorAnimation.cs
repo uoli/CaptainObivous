@@ -26,7 +26,7 @@ public class DoorAnimation : MonoBehaviour
 			m_Time += Time.deltaTime;
 			break;
 		case State.Closing:
-			m_Time -= Time.deltaTime;
+			m_Time -= Time.deltaTime * 2;
 			break;
 		}
 
@@ -56,5 +56,17 @@ public class DoorAnimation : MonoBehaviour
 		if (!m_Sealed && seal)
 			m_Sealed = true;
 		m_State = State.Closing;
+	}
+
+	public void CloseInstant (bool seal)
+	{
+		if (m_Sealed)
+			return;
+		
+		enabled = true;
+		m_Time = 0.01f;
+		if (!m_Sealed && seal)
+			m_Sealed = true;
+        m_State = State.Closing;
 	}
 }

@@ -39,6 +39,13 @@ public class Room : MonoBehaviour
 			doorAnim.Close(seal);
 	}
 
+	public void CloseDoorWithConnectorForLooping (Connector connector)
+	{
+		DoorAnimation doorAnim = connector.transform.parent.GetComponentInChildren<DoorAnimation>();
+		if (doorAnim != null)
+			doorAnim.CloseInstant(false);
+	}
+
 	public void EnableEntryDoorHack ()
 	{
 		var connector = GetConnector(1);
