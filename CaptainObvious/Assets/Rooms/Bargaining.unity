@@ -320,9 +320,10 @@ GameObject:
   - 4: {fileID: 79994737}
   - 65: {fileID: 79994739}
   - 114: {fileID: 79994738}
+  - 82: {fileID: 79994740}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -352,6 +353,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 4
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &79994739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -365,6 +368,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &79994740
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79994736}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &93926172
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +768,126 @@ Prefab:
       propertyPath: m_LightmapTilingOffset.w
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11450328, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450326, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450324, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450322, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450320, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450318, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450316, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450314, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450312, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450310, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: goodSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+    - target: {fileID: 11450328, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450326, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450324, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450322, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450320, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450318, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450316, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450314, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450312, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 11450310, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: badSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
+    - target: {fileID: 150328, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150326, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150324, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150322, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150320, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150318, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150316, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150314, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150312, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 150310, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd03a708a27c98343b020ede92b460cf, type: 2}
   m_RootGameObject: {fileID: 383828493}
@@ -800,7 +981,7 @@ GameObject:
   - 114: {fileID: 136764008}
   m_Layer: 0
   m_Name: AnsweringMashine
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -948,9 +1129,10 @@ GameObject:
   - 4: {fileID: 141532550}
   - 65: {fileID: 141532552}
   - 114: {fileID: 141532551}
+  - 82: {fileID: 141532553}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -980,6 +1162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 5
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &141532552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -993,6 +1177,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &141532553
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141532549}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &171698370
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,9 +1245,10 @@ GameObject:
   - 4: {fileID: 171698371}
   - 65: {fileID: 171698373}
   - 114: {fileID: 171698372}
+  - 82: {fileID: 171698374}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1035,6 +1278,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 8
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &171698373
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1048,6 +1293,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &171698374
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 171698370}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &199637650
 Prefab:
   m_ObjectHideFlags: 0
@@ -1633,9 +1936,10 @@ GameObject:
   - 4: {fileID: 253771157}
   - 65: {fileID: 253771159}
   - 114: {fileID: 253771158}
+  - 82: {fileID: 253771160}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1665,6 +1969,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 7
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &253771159
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1678,6 +1984,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &253771160
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 253771156}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &334037602
 Prefab:
   m_ObjectHideFlags: 0
@@ -1921,7 +2285,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c56305079d28ff44e9e8addba3bce906, type: 3}
       propertyPath: m_RootOrder
-      value: 42
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c56305079d28ff44e9e8addba3bce906, type: 3}
       propertyPath: m_LocalScale.x
@@ -2296,9 +2660,10 @@ GameObject:
   - 4: {fileID: 408572811}
   - 65: {fileID: 408572813}
   - 114: {fileID: 408572812}
+  - 82: {fileID: 408572814}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2328,6 +2693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 0
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &408572813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2341,6 +2708,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &408572814
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408572810}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &450150295
 Prefab:
   m_ObjectHideFlags: 0
@@ -2835,9 +3260,10 @@ GameObject:
   - 4: {fileID: 610703485}
   - 65: {fileID: 610703487}
   - 114: {fileID: 610703486}
+  - 82: {fileID: 610703488}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2867,6 +3293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 9
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &610703487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2880,6 +3308,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &610703488
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 610703484}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &623050805
 Prefab:
   m_ObjectHideFlags: 0
@@ -3171,9 +3657,10 @@ GameObject:
   - 4: {fileID: 715447802}
   - 65: {fileID: 715447804}
   - 114: {fileID: 715447803}
+  - 82: {fileID: 715447805}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3203,6 +3690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 3
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &715447804
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3216,6 +3705,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &715447805
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715447801}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &719974617
 Prefab:
   m_ObjectHideFlags: 0
@@ -3253,7 +3800,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c56305079d28ff44e9e8addba3bce906, type: 3}
       propertyPath: m_RootOrder
-      value: 44
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c56305079d28ff44e9e8addba3bce906, type: 3}
       propertyPath: m_LocalScale.x
@@ -3689,7 +4236,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c56305079d28ff44e9e8addba3bce906, type: 3}
       propertyPath: m_RootOrder
-      value: 43
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c56305079d28ff44e9e8addba3bce906, type: 3}
       propertyPath: m_LocalScale.x
@@ -4053,7 +4600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 492602, guid: 16e0bfc0c2dc2e843bfe82de4deb5d20, type: 2}
       propertyPath: m_RootOrder
-      value: 46
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 2392602, guid: 16e0bfc0c2dc2e843bfe82de4deb5d20, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -4143,6 +4690,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3bb949814e217ba45aa22aa48a115d26, type: 2}
+    - target: {fileID: 100002, guid: 66425119198f22b4faedce0efc6ef14d, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 66425119198f22b4faedce0efc6ef14d, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 66425119198f22b4faedce0efc6ef14d, type: 3}
@@ -4644,7 +5195,7 @@ GameObject:
   - 65: {fileID: 1013192970}
   m_Layer: 0
   m_Name: PowerSocket
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4659,7 +5210,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1013192971
 Transform:
@@ -5499,9 +6050,10 @@ GameObject:
   - 4: {fileID: 1167267449}
   - 65: {fileID: 1167267451}
   - 114: {fileID: 1167267450}
+  - 82: {fileID: 1167267452}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5531,6 +6083,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 6
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &1167267451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5544,6 +6098,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &1167267452
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1167267448}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1171028392
 Prefab:
   m_ObjectHideFlags: 0
@@ -6548,9 +7160,10 @@ GameObject:
   - 4: {fileID: 1496938823}
   - 65: {fileID: 1496938825}
   - 114: {fileID: 1496938824}
+  - 82: {fileID: 1496938826}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6580,6 +7193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 1
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &1496938825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6593,6 +7208,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &1496938826
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496938822}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &1536550234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6719,7 +7392,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 492602, guid: 16e0bfc0c2dc2e843bfe82de4deb5d20, type: 2}
       propertyPath: m_RootOrder
-      value: 41
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 192602, guid: 16e0bfc0c2dc2e843bfe82de4deb5d20, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -8050,6 +8723,10 @@ Prefab:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 148976, guid: 316a6d79ffcaa004bb9532a34c4fa82f, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9548976, guid: 316a6d79ffcaa004bb9532a34c4fa82f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 316a6d79ffcaa004bb9532a34c4fa82f, type: 2}
@@ -8903,7 +9580,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5347bfb066a13c439c0529fc23089b5, type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b5347bfb066a13c439c0529fc23089b5, type: 3}
       propertyPath: m_LocalScale.x
@@ -8956,9 +9633,10 @@ GameObject:
   - 4: {fileID: 2057363542}
   - 65: {fileID: 2057363544}
   - 114: {fileID: 2057363543}
+  - 82: {fileID: 2057363545}
   m_Layer: 0
   m_Name: PhoneButtonTrigger
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8988,6 +9666,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   digit: 2
+  goodSound: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  badSound: {fileID: 8300000, guid: b6da3bacba388004681fb30b0e37e943, type: 3}
 --- !u!65 &2057363544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9001,6 +9681,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &2057363545
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2057363541}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 7e3dffdc4e5996e49a4ab6da6313d223, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &2085101501
 GameObject:
   m_ObjectHideFlags: 0

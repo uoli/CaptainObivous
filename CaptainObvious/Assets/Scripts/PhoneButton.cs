@@ -4,14 +4,21 @@ using System.Collections;
 public class PhoneButton : MonoBehaviour
 {
 	public int digit;
+	public AudioClip goodSound;
+	public AudioClip badSound;
 
 	public void OnMouseDown()
 	{
-		if (Camera.main.audio.isPlaying)
+		var audioSource = Camera.main.audio;
+		if (audioSource.isPlaying)
 			return;
 			
 		var phone = GameObject.Find("Phone");
 		var phoneComponent = phone.GetComponent<PhoneNew>();
-		phoneComponent.DialDigit((char) ('0' + digit));
+		if (phoneComponent.DialDigit((char) ('0' + digit)))
+			audioSource.clip = goodSound;
+		else
+			audioSource.clip = badSound;
+		audioSource.Play();
 	}
 }
