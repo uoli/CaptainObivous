@@ -3927,6 +3927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstMessage: {fileID: 8300000, guid: 727d669c570bafd4a8392f26c777414c, type: 3}
   secondMessage: {fileID: 8300000, guid: 9e7481eab1a3ea84880c1f357b56b0e8, type: 3}
+  room: {fileID: 0}
 --- !u!64 &837764198
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4684,6 +4685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49b99e388536134ca3368678d9b5ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  room: {fileID: 629956911}
 --- !u!1 &1013345782
 GameObject:
   m_ObjectHideFlags: 0
