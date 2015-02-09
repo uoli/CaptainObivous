@@ -4371,7 +4371,7 @@ MonoBehaviour:
   - {fileID: 112616486}
   - {fileID: 1992789133}
   m_Looping: 0
-  m_IsFinal: 0
+  m_IsFinal: 1
 --- !u!1 &651814097
 GameObject:
   m_ObjectHideFlags: 0
