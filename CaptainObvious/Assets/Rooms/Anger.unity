@@ -1140,7 +1140,6 @@ GameObject:
   - 54: {fileID: 143019297}
   - 135: {fileID: 143019296}
   - 114: {fileID: 143019300}
-  - 135: {fileID: 143019295}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -1160,18 +1159,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 851479729}
   m_RootOrder: 48
---- !u!135 &143019295
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 143019293}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .116327234
-  m_Center: {x: 2.23517418e-08, y: 7.45058237e-09, z: 0}
 --- !u!135 &143019296
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3792,7 +3779,6 @@ GameObject:
   - 54: {fileID: 627129589}
   - 135: {fileID: 627129588}
   - 114: {fileID: 627129592}
-  - 135: {fileID: 627129587}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -3812,18 +3798,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 851479729}
   m_RootOrder: 46
---- !u!135 &627129587
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 627129585}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .116327234
-  m_Center: {x: 2.23517418e-08, y: 7.45058237e-09, z: 0}
 --- !u!135 &627129588
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4378,7 +4352,6 @@ GameObject:
   - 54: {fileID: 700479810}
   - 135: {fileID: 700479809}
   - 114: {fileID: 700479813}
-  - 135: {fileID: 700479808}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -4398,18 +4371,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 851479729}
   m_RootOrder: 45
---- !u!135 &700479808
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 700479806}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .116327234
-  m_Center: {x: 2.23517418e-08, y: 7.45058237e-09, z: 0}
 --- !u!135 &700479809
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7199,7 +7160,6 @@ GameObject:
   - 54: {fileID: 1405681903}
   - 135: {fileID: 1405681904}
   - 114: {fileID: 1405681907}
-  - 135: {fileID: 1405681902}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -7219,18 +7179,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 851479729}
   m_RootOrder: 44
---- !u!135 &1405681902
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1405681900}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .116327234
-  m_Center: {x: 2.23517418e-08, y: 7.45058237e-09, z: 0}
 --- !u!54 &1405681903
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8750,7 +8698,6 @@ GameObject:
   - 54: {fileID: 1920654741}
   - 135: {fileID: 1920654740}
   - 114: {fileID: 1920654744}
-  - 135: {fileID: 1920654739}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -8770,18 +8717,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 851479729}
   m_RootOrder: 47
---- !u!135 &1920654739
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1920654737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: .116327234
-  m_Center: {x: 2.23517418e-08, y: 7.45058237e-09, z: 0}
 --- !u!135 &1920654740
 SphereCollider:
   m_ObjectHideFlags: 0
