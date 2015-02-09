@@ -19,26 +19,29 @@ public class Cursor : MonoBehaviour {
 		RaycastHit hit = new RaycastHit();
 		bool isNarrationHappening = Camera.main.audio.isPlaying;
 		overInteractable = false;
-		if (Physics.Raycast (ray, out hit, 10)) 
+		if (!holdsObject)
 		{
-			if (hit.collider.gameObject.tag.Equals("Interactable"))
+			if (Physics.Raycast (ray, out hit, 10)) 
 			{
-				overInteractable = true;
-				selectedInteractable = hit.collider.gameObject;
+				if (hit.collider.gameObject.tag.Equals("Interactable"))
+				{
+					overInteractable = true;
+					selectedInteractable = hit.collider.gameObject;
+				}
 			}
-		}
 
-		if (overInteractable && isNarrationHappening && !selectedInteractable.name.Equals("PunchBag"))
-		{
-			UnityEngine.Cursor.SetCursor(nonInteractCursor, Vector3.zero, CursorMode.Auto);
-		}
-		else if(overInteractable)
-		{
-			UnityEngine.Cursor.SetCursor(interactCursor, Vector3.zero, CursorMode.Auto);
-		}
-		else
-		{
-			UnityEngine.Cursor.SetCursor(normalCursor, Vector3.zero, CursorMode.Auto);
+			if (overInteractable && isNarrationHappening && !selectedInteractable.name.Equals("PunchBag"))
+			{
+				UnityEngine.Cursor.SetCursor(nonInteractCursor, Vector3.zero, CursorMode.Auto);
+			}
+			else if(overInteractable)
+			{
+				UnityEngine.Cursor.SetCursor(interactCursor, Vector3.zero, CursorMode.Auto);
+			}
+			else
+			{
+				UnityEngine.Cursor.SetCursor(normalCursor, Vector3.zero, CursorMode.Auto);
+			}
 		}
 
 		if (!isNarrationHappening)
