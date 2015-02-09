@@ -3579,6 +3579,7 @@ MonoBehaviour:
   - {fileID: 112616486}
   - {fileID: 1428289320}
   m_Looping: 0
+  m_IsFinal: 0
 --- !u!1 &635964537
 GameObject:
   m_ObjectHideFlags: 0
@@ -5401,8 +5402,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1013345786}
   - 33: {fileID: 1013345785}
-  - 64: {fileID: 1013345784}
   - 23: {fileID: 1013345783}
+  - 65: {fileID: 1013345784}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -5430,8 +5431,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &1013345784
-MeshCollider:
+--- !u!65 &1013345784
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -5440,9 +5441,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 12, y: .200000003, z: 12}
+  m_Center: {x: 0, y: -.100000001, z: 0}
 --- !u!33 &1013345785
 MeshFilter:
   m_ObjectHideFlags: 0

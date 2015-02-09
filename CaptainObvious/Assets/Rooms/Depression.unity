@@ -1532,6 +1532,7 @@ GameObject:
   - 23: {fileID: 225547627}
   - 54: {fileID: 225547626}
   - 135: {fileID: 225547625}
+  - 114: {fileID: 225547629}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -1575,7 +1576,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1609,6 +1610,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1401710134}
   m_GameObject: {fileID: 225547623}
   m_Mesh: {fileID: 4300000, guid: 51cff4ff3e85bd543b88d37b0d40446b, type: 3}
+--- !u!114 &225547629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1401710134}
+  m_GameObject: {fileID: 225547623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!1 &231145654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,6 +2549,7 @@ GameObject:
   - 23: {fileID: 463447631}
   - 54: {fileID: 463447629}
   - 135: {fileID: 463447628}
+  - 114: {fileID: 463447630}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -2566,11 +2581,24 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &463447630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 31165586}
+  m_GameObject: {fileID: 463447627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!23 &463447631
 Renderer:
   m_ObjectHideFlags: 0
@@ -3125,6 +3153,7 @@ MonoBehaviour:
   - {fileID: 112616486}
   - {fileID: 1428289320}
   m_Looping: 0
+  m_IsFinal: 0
 --- !u!1 &635964537
 GameObject:
   m_ObjectHideFlags: 0
@@ -4394,6 +4423,7 @@ GameObject:
   - 23: {fileID: 1002020684}
   - 54: {fileID: 1002020682}
   - 135: {fileID: 1002020681}
+  - 114: {fileID: 1002020683}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -4425,11 +4455,24 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1002020683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1913590914}
+  m_GameObject: {fileID: 1002020680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!23 &1002020684
 Renderer:
   m_ObjectHideFlags: 0
@@ -4480,8 +4523,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1013345786}
   - 33: {fileID: 1013345785}
-  - 64: {fileID: 1013345784}
   - 23: {fileID: 1013345783}
+  - 65: {fileID: 1013345784}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -4509,8 +4552,8 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &1013345784
-MeshCollider:
+--- !u!65 &1013345784
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -4519,9 +4562,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Size: {x: 12, y: .200000003, z: 12}
+  m_Center: {x: 0, y: -.100000001, z: 0}
 --- !u!33 &1013345785
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7053,6 +7095,7 @@ GameObject:
   - 23: {fileID: 1587798077}
   - 54: {fileID: 1587798075}
   - 135: {fileID: 1587798074}
+  - 114: {fileID: 1587798076}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -7084,11 +7127,24 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1587798076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 280702143}
+  m_GameObject: {fileID: 1587798073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!23 &1587798077
 Renderer:
   m_ObjectHideFlags: 0
@@ -7671,6 +7727,7 @@ GameObject:
   - 23: {fileID: 1722196998}
   - 54: {fileID: 1722196996}
   - 135: {fileID: 1722196995}
+  - 114: {fileID: 1722196997}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -7702,11 +7759,24 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1722196997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 9756172}
+  m_GameObject: {fileID: 1722196994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!23 &1722196998
 Renderer:
   m_ObjectHideFlags: 0
@@ -7760,6 +7830,7 @@ GameObject:
   - 23: {fileID: 1731611496}
   - 54: {fileID: 1731611495}
   - 135: {fileID: 1731611494}
+  - 114: {fileID: 1731611498}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -7803,7 +7874,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -7837,6 +7908,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 157162617}
   m_GameObject: {fileID: 1731611492}
   m_Mesh: {fileID: 4300000, guid: 51cff4ff3e85bd543b88d37b0d40446b, type: 3}
+--- !u!114 &1731611498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 157162617}
+  m_GameObject: {fileID: 1731611492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!1001 &1799098676
 Prefab:
   m_ObjectHideFlags: 0
@@ -8205,6 +8289,7 @@ GameObject:
   - 23: {fileID: 1841344626}
   - 54: {fileID: 1841344625}
   - 135: {fileID: 1841344624}
+  - 114: {fileID: 1841344628}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -8248,7 +8333,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -8282,6 +8367,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 2060920614}
   m_GameObject: {fileID: 1841344622}
   m_Mesh: {fileID: 4300000, guid: 51cff4ff3e85bd543b88d37b0d40446b, type: 3}
+--- !u!114 &1841344628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 2060920614}
+  m_GameObject: {fileID: 1841344622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!1 &1862260190
 GameObject:
   m_ObjectHideFlags: 0
@@ -8884,6 +8982,7 @@ GameObject:
   - 23: {fileID: 2001950182}
   - 54: {fileID: 2001950181}
   - 135: {fileID: 2001950180}
+  - 114: {fileID: 2001950184}
   m_Layer: 0
   m_Name: CrushedPaperNote
   m_TagString: Interactable
@@ -8927,7 +9026,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -8961,6 +9060,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1532823763}
   m_GameObject: {fileID: 2001950178}
   m_Mesh: {fileID: 4300000, guid: 51cff4ff3e85bd543b88d37b0d40446b, type: 3}
+--- !u!114 &2001950184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11493904, guid: 010e7af8282b6f347aa65668c5a9ca06,
+    type: 2}
+  m_PrefabInternal: {fileID: 1532823763}
+  m_GameObject: {fileID: 2001950178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71790d8d7b3d2c541ae103c075d5263d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collected: 0
 --- !u!1001 &2021810866
 Prefab:
   m_ObjectHideFlags: 0
