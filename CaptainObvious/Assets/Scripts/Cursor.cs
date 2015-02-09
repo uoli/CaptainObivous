@@ -43,6 +43,7 @@ public class Cursor : MonoBehaviour {
 				UnityEngine.Cursor.SetCursor(normalCursor, Vector3.zero, CursorMode.Auto);
 			}
 		}
+		ProMouse.Instance.SetCursorPosition(Screen.width/2, Screen.height/2);
 
 		if (!isNarrationHappening)
 			HandleMouseClick(ray, hit);
